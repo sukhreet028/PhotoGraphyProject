@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}.wrapper{
+    height:auto;
+    width:100%;
+}
+.container{
+  width: 70%;
+  display: flex;
+  flex-direction:column;
+  margin: auto;
+  background-color: rgb(239, 241, 241);
+}
+.homepage{
+    height:900px;
+    color:black;
+    background-image: url('../images/home2.jpeg');
+    background-size:100% 100%;
+}
+/* #homepageImg{
+    height:1000px;
+    width:100%; 
+}*/
+/* .homepage h1{
+      z-index: 2;
+} */
+.home-buttons{
+    height: 30px;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    /* background-color: blue; */
+}
+.about-us-btn ,.contact-us-btn{
+    border: 2px solid rgb(0, 0, 0);
+    height: 30px;
+    width: 150px;
+}
+.photographer-intro-container{
+    height: 850px; 
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    /* background-color: chocolate; */
+    margin: auto;
+}
+.introduction-text{
+    height: 80px;
+    width: 100%;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    /* margin: auto; */
+    /* background-color: cornflowerblue; */
+}
+.photographerImg{
+    height:600px;
+    /* background-color:rgb(155, 6, 6); */
+}
+.photographerImg img{
+    height:600px;
+    /* width:100%; */
+    border-right: 10px solid rgb(101, 158, 101);
+    border-top: 10px solid rgb(101, 158, 101);
+}
+.achievements-slider-container{
+    height: 580px;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+}
+.achievement-slider-heading{
+    height: 50px;
+    width: 65%;
+    margin: auto;
+    /* background-color: burlywood; */
+    font-size: 25px;
+    color: rgb(2, 2, 2);
+}
+.achievement-slider{
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+}
+.awardImg{
+    height:490px;
+    
+
+}
+.award-expertise-projects-text-container{
+    height: 550px;
+    width: 70%;
+    /* background-color: chartreuse; */
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.awards, .expertise , .our-projects{
+    height: 183px;
+    /* border: 2px solid rgb(0, 0, 0); */
+}
+.award-heading , .expertise-heading , .project-heading{
+     height: 63px;
+     /* background-color: burlywood; */
+     font-size: 25px;
+
+}
+.award-name-description , .expertise-description , .project-description{
+height: 120px;
+/* background-color: pink; */
+}
+.locate-us{
+  height: 550px;
+  background-color: white;
+  border: 2px solid black;
+}

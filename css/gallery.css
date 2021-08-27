@@ -1,0 +1,172 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.gallery-wrapper{
+    height:100%;
+    width: 100%;
+    /* background-color: rgb(119, 18, 18); */
+}
+.gallery-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    background-color: rgb(255, 255, 255);
+    margin:auto;
+}
+.gallery-nav{
+    width: 100%;
+    background-color: rgb(202, 202, 9);
+    margin-top: 30px;
+}
+.nav-list{
+    height: 80px;
+    /* width: 100%; */
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+}
+.nav-list li{
+    list-style: none;
+    font-size: 20px;
+    padding: 10px 95px;
+ }
+.nav-list a{
+    text-decoration: none;
+    color: rgb(101, 158, 101);
+    text-transform: uppercase;
+}
+.nav-list li a:hover{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.gallery-infromation-container{
+   height: 100vh;
+    width: 100%;
+    background-color: turquoise;
+  display:grid;
+  grid-template-rows:100vh 100vh;
+}
+.main-gallery{
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap:8%;
+ }
+.gallery-wedding-image{
+  /* background-color:black; */
+  grid-row: 1/ span 2;
+  background-image: url('../images/wedding-gallery.jpeg');
+  background-position: center;
+  background-size: cover;
+}
+.gallery-quote{
+/* background-color: tomato; */
+text-align: center;
+ margin-top:60px;
+}
+.gallery-quote h1{
+    font-size: 35px; 
+    color:rgb(101, 158, 101);
+    padding-bottom: 40px; 
+}
+.gallery-quote p{
+font-size: 20px;
+color: black;
+margin-top:30px;
+}
+.gallery-family-image{
+/* background-color: slateblue; */
+background-image: url('../images/family-gallery.jpeg');
+background-position: center;
+background-size: cover;
+}
+.gallery-images-btn-footer-container{
+    background-color:white;
+    display: grid;
+    grid-template-rows: 900px 50px 50px;
+}
+.gallery-images{
+    /* background-color: yellow; */
+    height: 900px; 
+    width: 100%;  
+     display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:repeat(2,1fr);
+     grid-row-gap: 10px;
+     grid-column-gap: 90px;
+     /* margin: 50px 0px 80px 0px; */
+     justify-content:space-evenly;
+     align-items: center; 
+     /* place-items: center; */
+} 
+.event-images1 , .event-images2 ,.event-images3 ,.event-images4 ,.event-images5 ,.event-images6{
+    height: 380px;
+    /* width: 450px; */
+    /* background-color:rgb(126, 19, 19); */
+    background-size: cover;
+    background-position: center;
+     
+}
+.event-images1{
+    /* background-color: darkslategray; */
+    align-self: flex-end;
+    background-image: url('../images/img1.jpeg');
+ 
+}
+.event-images2{
+    /* background-color: cadetblue; */
+    align-self: flex-end;
+    background-image: url('../images/img2.jpeg');
+   
+}
+.event-images3{
+    /* background-color: rgb(112, 95, 160); */
+    align-self: flex-end;
+    background-image: url('../images/img3.jpeg');
+}
+
+.event-images4{
+    /* background-color: rgb(0, 182, 70); */
+    background-image: url('../images/img5.jpeg');
+}
+
+.event-images5{
+    /* background-color: rgb(160, 113, 95); */
+    background-image: url('../images/pic3.jpeg');
+
+}
+.event-images6{
+    background-color: rgb(14, 6, 3);
+    background-image: url('../images/img6.jpeg');
+}
+ .gallery-btn{
+     height: 50px;
+     /* background-color: cornsilk; */
+ }
+ .gallery-btn button{
+     height: 50px;
+     width: 220px;
+     background-color: rgb(101, 158, 101);
+     color: white;
+     border: none;
+     font-size: 15px;
+     text-transform: uppercase;
+     position: relative;
+    top: 0%;
+    left: 85%;
+    border-radius: 2%;
+ }
+
+.gallery-footer{
+    height: 50px;
+    width: 70%;
+    margin: 20px auto;
+    /* background-color: turquoise;  */
+}
+.footer-copyright{
+    text-align: center;
+} 

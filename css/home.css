@@ -87,9 +87,9 @@
   position: absolute;
   width: 531px;
   height: 195px;
-  background: rgba(79, 75, 75, 0.3);
+  background-color:  rgb(234 232 233);
   border-radius: 8px;
-  top: -55px;
+  top: -24px;
   left: -41px;
   z-index: -1;
 }
@@ -162,6 +162,7 @@
 }
 .achievement-slider {
   background-color: rgb(255, 255, 255);
+  width: 70%;
   margin: auto;
 }
 .awardImg {

@@ -61,6 +61,16 @@
   display: flex;
   flex-direction: column;
   background-image: url('../images/about.jpeg');
+  box-sizing: border-box;
+}
+@media (max-width: 1000px) {
+    .aboutText{
+    width: 100%;
+    }
+.aboutImage{
+    display: none;
+}
+    
 }
 
 .about-text-container {

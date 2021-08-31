@@ -55,6 +55,12 @@ margin: auto;
  display: flex;
  flex-direction: row;
 }
+@media (max-width: 900px) {
+.contact-address-container{
+    font-size: 10px;
+}
+}
+
 .contact-image-address-container{
   width: 50%;
   height: 950px;
@@ -77,7 +83,7 @@ margin: auto;
 .contact-address-container{
     height: 120px;
     width: 80%;
-    background-color:rgb(54, 54, 54);
+    background-color: rgb(54 54 54 / 65%);
     margin-left: 55px;
     text-align: center;
     font-size: 20px;
@@ -101,7 +107,7 @@ margin: auto;
 .contact-form{
     width: 75%;
     height: 845px;
-    background-color: rgb(54, 54, 54);
+    background-color: rgb(54 54 54 / 65%);
     position: absolute;
     top: 6%;
     left: 2%;

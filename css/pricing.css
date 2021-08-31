@@ -1,4 +1,8 @@
-.pricing-wrapper{
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+.pricing-wrapper{ 
     height:100%;
     width: 100%;
     /* background-color: rgb(119, 18, 18); */
@@ -21,12 +25,15 @@
     /* width: 100%; */
     background-color: rgb(255, 255, 255);
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .pricing-nav-list li{
     list-style: none;
     font-size: 20px;
-    padding: 10px 95px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* padding: 10px 95px; */
  }
 .pricing-nav-list a{
     text-decoration: none;
@@ -39,16 +46,19 @@
 }
 .pricing-information-container{
     height: 750px;
-    width: 100%;
-    border: 2px solid black;
+    width: 900px;
+    /* border: 2px solid black; */
     /* background-color: cornflowerblue; */
     display: grid;
-    grid-template-rows: repeat(2,1fr);
+    /* grid-template-rows: repeat(2,1fr); */
     grid-template-columns: repeat(2,1fr);
-    border: 5px solid rgb(101, 158, 101);
+    grid-auto-rows: 300px;
     justify-items:center;
     align-items: center;
    grid-gap: 20px;
+   position: relative;
+   top: 22%;
+   left:16%;
 
 }
 .bronze-package-text ,.silver-package-text ,.platinum-package-text ,.basicHourly-package-text{
@@ -57,9 +67,22 @@
  width: 500px;
  height: 300px;
  text-align: center;
- color:rgb(101, 158, 101);
+ color: rgb(10 10 10);
+ background-color: burlywood;
+ position: relative;
+ top:20%;
 
 
+}
+.silver-package-text{
+    background-color: rgb(125, 198, 211);
+}
+.platinum-package-text{
+    background-color: rgb(92, 100, 134);
+}
+.basicHourly-package-text{
+    background-color: rgb(253, 226, 201);
+    align-self: flex-end;
 }
 .price-heading{
     height: 50px;
@@ -84,7 +107,7 @@
     width: 850px;
     text-transform: uppercase;
     color:white;
-    background-color: rgb(101, 158, 101);
+    background-color: rgb(49, 49, 49);
     border: none;
     font-size: 20px;
     margin-top: 20px;
@@ -96,10 +119,14 @@
 }
 .pricing-footer{
     height: 60px;
-    width: 70%;
+    width: 30%;
     margin: 40px auto;
     /* background-color: turquoise; */
 }
 .pricing-footer-copyright{
     text-align: center;
+}
+#footer-icon a{
+    text-decoration: none;
+    color: black;
 }

@@ -165,6 +165,7 @@
   margin: auto;
 }
 .awardImg {
+  width: 100%;
   height: 490px;
 }
 .award-expertise-projects-text-container {
@@ -195,7 +196,7 @@
   /* background-color: pink; */
 }
 .locate-us {
-  height: 660px;
+  height: 350px;
   width: 70%;
   background-color: white;
   display: flex;
@@ -209,7 +210,7 @@
   text-align: center;
 }
 .locate-us-image {
-  height: 600px;
+  height: 300px;
   width: 100%;
   background-image: url('../images/map.jpeg');
 }
@@ -222,3 +223,8 @@
 .footer-copyright {
   text-align: center;
 }
+#footer-icon a{
+  text-decoration: none;
+  color: black;
+}
+

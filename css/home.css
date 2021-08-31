@@ -1,35 +1,224 @@
-.wrapper{
-    height:auto;
-    width: auto;
+* {
+  margin: 0px;
+  padding: 0px;
 }
-.container{
-  width: 80%;
+.wrapper {
+  height: auto;
+  width: 100%;
+}
+.main-image {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  /* background-image: url("../images/home2.jpeg");
+  background-repeat: no-repeat;
+  background-size:100% 100%; */
+}
+.home-main-image {
+  height: 100vh;
+  width: 100vw;
+  object-fit: fill;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.home-nav-button-container {
+  width: 70%;
+  height: 100vh;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  background-color: transparent;
+}
+.main-nav-container {
+  height: 50px;
+  width: 70%;
+  /* background-color: blue; */
+  position: relative;
+  top: 1%;
+  left: 62%;
+  display: flex;
+}
+.main-nav {
+  background-color: transparent;
+  overflow: hidden;
+  /* margin-top: 5px; */
+  display: none;
+}
+.main-nav li {
+  list-style: none;
+  font-family: 20px;
+  float: left;
+  margin: 20px 20px;
+}
+.main-nav li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  color: rgb(71, 151, 71);
+  font-size: 20px;
+}
+.main-nav-button {
+  height: 50px;
+  width: 60px;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  background-color: rgb(101, 158, 101);
+  border: none;
+  border-radius: 15%;
+}
+.container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+}
+.homepage {
+  color: black;
+  margin-bottom: 135px;
+  position: relative
+}
+
+.contact-us-btn-background {
+  position: absolute;
+  width: 531px;
+  height: 195px;
+  background: rgba(79, 75, 75, 0.3);
+  border-radius: 8px;
+  top: -55px;
+  left: -41px;
+  z-index: -1;
+}
+
+.home-buttons {
+  height: 30px;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  /* background-color: blue; */
+}
+.about-us-btn,
+.contact-us-btn {
+  border: 3px solid rgb(101, 158, 101);
+  height: 35px;
+  width: 170px;
+  /* color: rgb(71, 151, 71); */
+  background-color: transparent;
+  font-size: 18px;
+}
+.about-us-btn a,
+.contact-us-btn a {
+  text-decoration: none;
+  color: rgb(71, 151, 71);
+}
+.photographer-intro-container {
+  height: 850px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-color: chocolate; */
   margin: auto;
 }
-.homepage{
-    height: 900px;
-    background-color: green;
-    color:black;
-    background-image: url('./images/home2.jpeg');
-   background-size:100% 100%;
-   background-position: center;
-   background-repeat:no-repeat;
+.introduction-text {
+  height: 80px;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  /* margin: auto; */
+  /* background-color: cornflowerblue; */
 }
-.photographer-info{
-    height: 850px;
-    background-color: black;
+.photographerImg {
+  height: 600px;
+  /* background-color:rgb(155, 6, 6); */
 }
-.achievements-slider{
-    height: 800px;
-    background-color: blue;
+.photographerImg img {
+  height: 600px;
+  width: 100%;
+  border-right: 10px solid rgb(101, 158, 101);
+  border-top: 10px solid rgb(101, 158, 101);
 }
-.award-expertise-projects-text{
-    height: 550px;
-    background-color: chartreuse;
+.achievements-slider-container {
+  height: 580px;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
 }
-.locate-us{
-    height: 700px;
-    background-color: chocolate;
+.achievement-slider-heading {
+  height: 50px;
+  width: 65%;
+  margin: auto;
+  /* background-color: burlywood; */
+  font-size: 25px;
+  color: rgb(2, 2, 2);
+}
+.achievement-slider {
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+}
+.awardImg {
+  height: 490px;
+}
+.award-expertise-projects-text-container {
+  height: 550px;
+  width: 70%;
+  /* background-color: chartreuse; */
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.awards,
+.expertise,
+.our-projects {
+  height: 183px;
+  /* border: 2px solid rgb(0, 0, 0); */
+}
+.award-heading,
+.expertise-heading,
+.project-heading {
+  height: 63px;
+  /* background-color: burlywood; */
+  font-size: 25px;
+}
+.award-name-description,
+.expertise-description,
+.project-description {
+  height: 120px;
+  /* background-color: pink; */
+}
+.locate-us {
+  height: 660px;
+  width: 70%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+}
+.locate-us-heading {
+  height: 50px;
+  font-size: 25px;
+  text-align: center;
+}
+.locate-us-image {
+  height: 600px;
+  width: 100%;
+  background-image: url('../images/map.jpeg');
+}
+.footer {
+  height: 50px;
+  width: 70%;
+  margin: 20px auto;
+  /* background-color: turquoise; */
+}
+.footer-copyright {
+  text-align: center;
 }

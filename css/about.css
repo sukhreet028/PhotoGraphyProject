@@ -24,7 +24,7 @@
   height: 80px;
   background-color: rgb(255, 255, 255);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 .nav-list li {
@@ -67,13 +67,9 @@
     .aboutText{
     width: 100%;
     }
-.aboutImage{
-    display: none;
-}
-.nav-list{
-    display: inline;
-}
-    
+    .aboutImage{
+      display: none;
+    }
 }
 
 .about-text-container {

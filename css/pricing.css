@@ -18,7 +18,7 @@
 .pricing-nav{
     width: 100%;
     /* background-color: rgb(202, 202, 9); */
-    /* margin-top: 30px; */
+    margin-top: 20px;
 }
 .pricing-nav-list{
     height: 50px;
@@ -55,9 +55,29 @@
     justify-content: center;    
     align-items: center;
    grid-gap: 20px;
-   position: relative;
-   top: 22%;
+   margin-top: 40px;
+   /* position: relative;
+   top: 22%; */
 }
+@media (max-width: 850px) {
+    .pricing-information-container{
+    width: 100%;
+    display:flex;
+   flex-direction:row;
+}
+    /* .package-information{
+        background-color: black;
+        color:white;
+        font-size: 5vw;
+    } */
+    .pricing-footer{
+        width: 50%;
+    }
+    .pricing-btn{
+        width: 220px;
+        color: tomato;
+    }
+    }
 .bronze-package-text ,.silver-package-text ,.platinum-package-text ,.basicHourly-package-text{
  /* background-color: darkgreen; */
  /* border: 2px solid  rgb(101, 158, 101); */
@@ -81,11 +101,11 @@
 }
 .price-heading{
     height: 50px;
-    font-size: 35px;
+    font-size:1.7vw;
    
 }
 .package-information{
-    font-size: 25px;
+    font-size: 1.5vw;
     
 }
 .booking-button{
@@ -99,27 +119,28 @@
 }
 .pricing-btn{
     height: 40px;
-    width: 850px;
+    width: 500px;
     text-transform: uppercase;
     color:white;
     background-color: rgb(49, 49, 49);
     border: none;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius: 2%;
 }
 
 .pricing-btn:hover{
-    background-color: rgb(30, 121, 30);
+    background-color: rgb(137, 190, 137);
 }
 .pricing-footer{
     height: 60px;
-    width: 40%;
-    margin: 40px auto;
+    width: 70%;
+    margin: 40px 40px 10px auto;
     /* background-color: turquoise; */
 }
 .pricing-footer-copyright{
     text-align: center;
+    padding-left: 30px;
 }
 #footer-icon a{
     text-decoration: none;

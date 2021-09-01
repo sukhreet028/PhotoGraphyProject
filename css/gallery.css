@@ -60,12 +60,17 @@
     left: -94%;
     width: 250px;
   }
-  .gallery-dropdown ul li{
-      border-bottom: 2px solid black;
+  .gallery-dropdown ul li:hover{
+      background-color: rgb(177, 221, 179);
+      height: 30px;
+      width: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
   .gallery-dropdown ul li a{
-    text-decoration: none;
-    color: red;
+    font-size: 15px;
+    color: rgb(2, 2, 2);
     }
 .gallery-list:hover .gallery-dropdown{
     display:block;
@@ -91,6 +96,22 @@
   background-image: url('../images/wedding-gallery.jpeg');
   background-position: center;
   background-size: cover;
+}
+@media (max-width: 1000px) {
+    .gallery-wedding-image{
+     display: none;
+    }
+    .gallery-quote{
+      width: 100%;
+    }
+    .gallery-quote p{
+        background-color: thistle;
+        height: 400px;
+        width: 600px;
+    }
+    .gallery-family-image{
+        display: none;
+    }
 }
 .gallery-quote{
 /* background-color: tomato; */

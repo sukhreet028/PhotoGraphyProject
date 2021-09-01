@@ -45,34 +45,29 @@
     cursor: pointer;
 }
 .pricing-information-container{
-    height: 750px;
-    width: 900px;
+    /* width: 900px; */
     /* border: 2px solid black; */
     /* background-color: cornflowerblue; */
     display: grid;
     /* grid-template-rows: repeat(2,1fr); */
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,500px);
     grid-auto-rows: 300px;
-    justify-items:center;
+    justify-content: center;    
     align-items: center;
    grid-gap: 20px;
    position: relative;
    top: 22%;
-   left:16%;
-
 }
 .bronze-package-text ,.silver-package-text ,.platinum-package-text ,.basicHourly-package-text{
  /* background-color: darkgreen; */
  /* border: 2px solid  rgb(101, 158, 101); */
- width: 500px;
  height: 300px;
+ width: 500px;
  text-align: center;
  color: rgb(10 10 10);
  background-color: burlywood;
- position: relative;
- top:20%;
-
-
+ /* position: relative;
+ top:20%; */
 }
 .silver-package-text{
     background-color: rgb(125, 198, 211);
@@ -82,7 +77,7 @@
 }
 .basicHourly-package-text{
     background-color: rgb(253, 226, 201);
-    align-self: flex-end;
+    /* align-self: flex-end; */
 }
 .price-heading{
     height: 50px;

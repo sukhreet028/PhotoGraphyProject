@@ -65,8 +65,9 @@
   }
   .gallery-dropdown ul li a{
     text-decoration: none;
+    color: red;
     }
-.nav-list:hover .gallery-dropdown{
+.gallery-list:hover .gallery-dropdown{
     display:block;
     /*position: absolute; */ 
 }

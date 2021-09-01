@@ -63,7 +63,7 @@
   .gallery-dropdown ul li{
       border-bottom: 2px solid black;
   }
-  .gallery-dropdownul ul li a{
+  .gallery-dropdown ul li a{
     text-decoration: none;
     }
 .nav-list:hover .gallery-dropdown{

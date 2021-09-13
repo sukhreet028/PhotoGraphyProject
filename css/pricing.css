@@ -18,7 +18,7 @@
 .pricing-nav{
     width: 100%;
     /* background-color: rgb(202, 202, 9); */
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 .pricing-nav-list{
     height: 50px;
@@ -44,59 +44,53 @@
     color: rgb(0, 0, 0);
     cursor: pointer;
 }
+.current{
+    background-color:  rgb(178, 216, 185);
+    border-radius: 5px;
+    padding: 4px 14px;
+    
+    
+}
+
 .pricing-information-container{
-    /* width: 900px; */
-    /* border: 2px solid black; */
-    /* background-color: cornflowerblue; */
+
     display: grid;
-    /* grid-template-rows: repeat(2,1fr); */
+
     grid-template-columns: repeat(2,500px);
-    grid-auto-rows: 300px;
     justify-content: center;    
     align-items: center;
-   grid-gap: 20px;
+   grid-gap: 25px;
    margin-top: 40px;
    /* position: relative;
    top: 22%; */
 }
-@media (max-width: 850px) {
-    .pricing-information-container{
-    width: 100%;
-    display:flex;
-   flex-direction:row;
+div [type="box"]{
+    filter: grayscale(0%);
+    transition: 1s;
 }
-    /* .package-information{
-        background-color: black;
-        color:white;
-        font-size: 5vw;
-    } */
-    .pricing-footer{
-        width: 50%;
-    }
-    .pricing-btn{
-        width: 220px;
-        color: tomato;
-    }
-    }
-.bronze-package-text ,.silver-package-text ,.platinum-package-text ,.basicHourly-package-text{
- /* background-color: darkgreen; */
- /* border: 2px solid  rgb(101, 158, 101); */
+div [type="box"]:hover{
+    filter: grayscale(100%);
+    transform: scale(1.3);
+}
+
+.bronze-package-text ,.silver-package-text 
+,.platinum-package-text ,.basicHourly-package-text{
  height: 300px;
  width: 500px;
  text-align: center;
  color: rgb(10 10 10);
- background-color: burlywood;
- /* position: relative;
- top:20%; */
+ background-color:#e6e1c1;
+  padding-top: 50px;
+
 }
 .silver-package-text{
-    background-color: rgb(125, 198, 211);
+    background-color: rgb(227 246 249);
 }
 .platinum-package-text{
-    background-color: rgb(92, 100, 134);
+    background-color: rgb(202, 205, 216);
 }
 .basicHourly-package-text{
-    background-color: rgb(253, 226, 201);
+    background-color:  rgb(255 241 229);
     /* align-self: flex-end; */
 }
 .price-heading{
@@ -124,18 +118,25 @@
     color:white;
     background-color: rgb(49, 49, 49);
     border: none;
+    position: relative;
     font-size: 20px;
     margin-top: 30px;
     border-radius: 2%;
+    animation-name: price-btn;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
 }
-
+@keyframes price-btn {
+    0%{right:-500px;}
+    100%{right:0px;}
+}
 .pricing-btn:hover{
     background-color: rgb(137, 190, 137);
 }
 .pricing-footer{
     height: 60px;
-    width: 70%;
-    margin: 40px 40px 10px auto;
+    width: 63%;
+    margin: 40px 0px 10px auto;
     /* background-color: turquoise; */
 }
 .pricing-footer-copyright{
@@ -146,3 +147,118 @@
     text-decoration: none;
     color: black;
 }
+
+@media (max-width: 950px) {
+    .pricing-nav-list{
+        height: 126px;
+        width: 100%;
+        background-color: white;
+        display: block;
+        text-align: center;
+        opacity: 0; 
+transition: 100ms;
+transform: translateX(600px);
+pointer-events: none;
+    }
+    .pricing-nav-list li a{
+        font-size: 13px;
+        padding: 4px;
+        color: black;
+    }
+    .pricingMenu .pricing-nav-list{
+        opacity: 1;
+        transition: 580ms;
+        /* background-color: lightgray; */
+        transform: translateX(0px);
+        pointer-events: all;
+      
+      }
+    .pricing-burger-icon{
+        height: 41px;
+        width: 68px;
+        /* border: 2px solid black; */
+        position: absolute;
+        top:2%;
+        left: 88%;
+          border-radius: 5px;
+        cursor: pointer;
+        transition: 10ms ease-in-out;
+      }
+      .line{
+        width: 45px;
+        height: 4px;
+        background-color: rgb(2, 2, 2);
+        /* margin:5px 2px; */
+        transition: 50ms ease-in-out;
+      }
+      .pLine1{
+        transform: translate(12px,10px);
+      }
+      .pLine2{
+        transform: translate(12px,15px)
+      }
+      .pLine3{
+        transform: translate(12px,21px)
+          /* transform:translateY(4px) */
+      }
+      .btnClass .pLine2{
+        background-color:transparent
+        
+      }
+      .btnClass .pLine1{
+        transform: rotate(-45deg) translate(-1px,22px);
+      }
+      .btnClass .pLine3{
+        transform: rotate(45deg) translate(19px,-3px);
+      }
+    .pricing-information-container{
+    width: 100%;
+    display:grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2,400px);
+    /* grid-template-rows: repeat(2,200px); */
+ 
+}
+.bronze-package-text ,.silver-package-text 
+,.platinum-package-text ,.basicHourly-package-text{
+ height: 200px;
+ width: 400px;
+ text-align: center;
+ background-color:#e6e1c1;
+ 
+}
+.silver-package-text{
+    background-color: rgb(227 246 249);
+}
+.platinum-package-text{
+    background-color: rgb(202, 205, 216);
+}
+.basicHourly-package-text{
+    background-color:  rgb(255 241 229);
+
+}
+.pricing-btn{
+    width: 220px;
+    background-color: rgb(7, 127, 233);
+}
+.pricing-footer{
+        width: 75%;
+    }
+ }
+
+    @media (max-width: 550px) {
+        .pricing-information-container{
+            width: 100%;
+            display: inline;
+            margin: auto;
+   }
+   .bronze-package-text ,.silver-package-text 
+,.platinum-package-text ,.basicHourly-package-text{
+    margin: 30px;
+    height: 150px;
+ width: 300px;
+}
+.pricing-footer{
+    width: 100%;   
+}
+    }

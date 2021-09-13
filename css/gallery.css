@@ -18,28 +18,28 @@
 }
 .gallery-nav{
     width: 100%;
-    background-color: rgb(202, 202, 9);
-    margin-top: 30px;
+    /* background-color: rgb(202, 202, 9); */
+    /* margin-top: 30px; */
 }
-.nav-list{
-    height: 80px;
+.gallery-nav-list{
+    height: 60px;
     /* width: 100%; */
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.nav-list li{
+.gallery-nav-list li{
     list-style: none;
     font-size: 20px;
     /* padding: 10px 95px; */
  }
-.nav-list a{
+.gallery-nav-list a{
     text-decoration: none;
     color: rgb(101, 158, 101);
     text-transform: uppercase;
 }
-.nav-list li a:hover{
+.gallery-nav-list li a:hover{
     color: rgb(0, 0, 0);
     cursor: pointer;
 }
@@ -76,10 +76,15 @@
     display:block;
     /*position: absolute; */ 
 }
+.current{
+    background-color:  rgb(178, 216, 185);
+    border-radius: 5px;
+    padding: 4px 14px;
+  }
 .gallery-infromation-container{
    height: 100vh;
     width: 100%;
-    background-color: turquoise;
+    /* background-color: turquoise; */
   display:grid;
   grid-template-rows:100vh 100vh;
 }
@@ -97,22 +102,6 @@
   background-position: center;
   background-size: cover;
 }
-@media (max-width: 1000px) {
-    .gallery-wedding-image{
-     display: none;
-    }
-    .gallery-quote{
-      width: 100%;
-    }
-    .gallery-quote p{
-        background-color: thistle;
-        height: 400px;
-        width: 600px;
-    }
-    .gallery-family-image{
-        display: none;
-    }
-}
 .gallery-quote{
 /* background-color: tomato; */
 text-align: center;
@@ -129,88 +118,193 @@ color: black;
 margin-top:30px;
 }
 .gallery-family-image{
-/* background-color: slateblue; */
-background-image: url('../images/family-gallery.jpeg');
-background-position: center;
-background-size: cover;
-}
-.gallery-images-btn-footer-container{
-    background-color:white;
-    display: grid;
-    grid-template-rows: 900px 50px 50px;
-}
-.gallery-images{
-    /* background-color: yellow; */
-    height: 900px; 
-    width: 100%;  
-     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows:repeat(2,1fr);
-     grid-row-gap: 10px;
-     grid-column-gap: 90px;
-     /* margin: 50px 0px 80px 0px; */
-     justify-content:space-evenly;
-     align-items: center; 
-     /* place-items: center; */
-} 
-.event-images1 , .event-images2 ,.event-images3 ,.event-images4 ,.event-images5 ,.event-images6{
-    height: 380px;
-    /* width: 450px; */
-    /* background-color:rgb(126, 19, 19); */
-    background-size: cover;
+    background-image: url('../images/family-gallery.jpeg');
     background-position: center;
+    background-size: cover;
+    }
+    .gallery-images-btn-footer-container{
+        background-color:white;
+        display: grid;
+        height: 100%;
+        grid-template-rows: 900px 50px 50px;
+    }
+    .gallery-images{
+        width: 100%;  
+         display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows:repeat(2,1fr);
+         grid-row-gap: 10px;
+         grid-column-gap: 90px;
+         justify-content:space-evenly;
+         align-items: center; 
+    } 
+    
+    #event-images1 , #event-images2 ,#event-images3 ,#event-images4 ,#event-images5 ,#event-images6{
+        height: 380px;
+        background-size: cover;
+        background-position: center;
+         
+    }
+    #event-images1{
+        align-self: flex-end;
+    }
+    #event-images2{
+        
+        align-self: flex-end;
      
-}
-.event-images1{
-    /* background-color: darkslategray; */
-    align-self: flex-end;
-    background-image: url('../images/img1.jpeg');
- 
-}
-.event-images2{
-    /* background-color: cadetblue; */
-    align-self: flex-end;
-    background-image: url('../images/img2.jpeg');
-   
-}
-.event-images3{
-    /* background-color: rgb(112, 95, 160); */
-    align-self: flex-end;
-    background-image: url('../images/img3.jpeg');
-}
+       
+    }
+    #event-images3{
+        
+        align-self: flex-end;
+        
+    }
+    
+    #event-images6{
+        background-color: rgb(14, 6, 3);
+      
+    }
+@media (max-width: 950px) {
+    .gallery-nav-list{
+        height: 126px;
+        width: 100%;
+        background-color: white;
+        display: block;
+        text-align: center;
+        opacity: 0; 
+    transition: 100ms;
+    transform: translateX(600px);
+    pointer-events: none;
+    }
+    .gallery-nav-list li a{
+        font-size: 13px;
+        padding: 4px;
+        color: black;
+    }
+    .galleryMenu .gallery-nav-list{
+        opacity: 1;
+        transition: 580ms;
+        /* background-color: lightgray; */
+        transform: translateX(0px);
+        pointer-events: all;
+      
+      }
+    .gallery-burger-icon{
+        height: 41px;
+        width: 68px;
+        /* border: 2px solid black; */
+        position: absolute;
+        top:2%;
+        left: 82%;
+          border-radius: 5px;
+        cursor: pointer;
+        transition: 10ms ease-in-out;
+      }
+      .line{
+        width: 45px;
+        height: 4px;
+        background-color: rgb(2, 2, 2);
+        /* margin:5px 2px; */
+        transition: 50ms ease-in-out;
+      }
+      .gLine1{
+        transform: translate(12px,10px);
+      }
+      .gLine2{
+        transform: translate(12px,15px)
+      }
+      .gLine3{
+        transform: translate(12px,21px)
+          /* transform:translateY(4px) */
+      }
+      .btnClassGallery .gLine2{
+        background-color:transparent
+        
+      }
+      .btnClassGallery .gLine1{
+        transform: rotate(-45deg) translate(-1px,22px);
+      }
+      .btnClassGallery .gLine3{
+        transform: rotate(45deg) translate(19px,-3px);
+      }
+      .main-gallery{
+        display: block;
+    
+    }
 
-.event-images4{
-    /* background-color: rgb(0, 182, 70); */
-    background-image: url('../images/img5.jpeg');
-}
+    .gallery-dropdown ul{
+        position: absolute;
+        height: 160px;
+        /* background-color: palevioletred; */
+        display: flex; 
+        justify-content: space-around; 
+         align-items: center; 
+        flex-direction: column;
+        /* position: absolute; 
+        top: 9%;
+        left: -94%; */
+        width: 250px;
+      }
+    
+      .myNewList{
+        position: relative;
+        display: block;
+    }
+    .gallery-dropdown ul {
+        height: 160px;
+        justify-content: space-around;
+        flex-direction: column;
+        position: absolute;
+        width: 250px;
+    }
+    .gallery-nav-list li {
+     font-size: 20px;
+    }
 
-.event-images5{
-    /* background-color: rgb(160, 113, 95); */
-    background-image: url('../images/pic3.jpeg');
 
+    .gallery-infromation-container{
+        display: block;
+        height: auto;
+    }
+    .gallery-images{
+        display: block;
+        margin: auto;
+    }
+    #event-images1 , #event-images2 ,#event-images3 
+    ,#event-images4 ,#event-images5 ,#event-images6{
+        width: 100%;
+        height: 450px;
+        width: 650px;
+        background-size:cover;
+        background-position: center;
+        margin: 15px;
+        border: 2px solid black;
+    }
+    
+    /* .gallery-wedding-image{
+     display: none;
+    }
+    .gallery-quote{
+      width:100%;
+      height: auto;
+      margin: 0px;
+    }
+    .gallery-quote h1{
+      
+        margin: 0px;
+        padding: 5px;
+    }
+    .gallery-quote p{
+        
+        margin: 0px;
+    }
+    .gallery-family-image{
+        display:none;
+    }  */
+    .gallery-images-btn-footer-container {
+        display: block;
+    }
 }
-.event-images6{
-    background-color: rgb(14, 6, 3);
-    background-image: url('../images/img6.jpeg');
-}
- .gallery-btn{
-     height: 50px;
-     /* background-color: cornsilk; */
- }
- .gallery-btn button{
-     height: 50px;
-     width: 220px;
-     background-color: rgb(101, 158, 101);
-     color: white;
-     border: none;
-     font-size: 15px;
-     text-transform: uppercase;
-     position: relative;
-    top: 0%;
-    left: 85%;
-    border-radius: 2%;
- }
-
 .gallery-footer{
     height: 50px;
     width: 70%;
@@ -224,3 +318,31 @@ background-size: cover;
     text-decoration: none;
     color: black;
 }
+ @media (max-width: 550px){
+    .main-gallery{
+        display: block;
+   
+    }
+    .gallery-infromation-container{
+        display: block;
+        height: auto;
+    }
+    .gallery-images{
+        display: block;
+        margin: auto;
+    }
+    #event-images1 , #event-images2 ,#event-images3 
+    ,#event-images4 ,#event-images5 ,#event-images6{
+        width: 100%;
+        height: 270px;
+        width: 450px;
+        background-size:cover;
+        background-position: center;
+        margin: 10px;
+        border: 2px solid black;
+    }
+  .gallery-images-btn-footer-container {
+        display: block;
+    }
+} 
+

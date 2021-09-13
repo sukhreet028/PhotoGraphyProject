@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <title>Contact Us</title>
     <link rel="stylesheet" href="../css/contact.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2cbe9cfb18.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="contact-wrapper">
     <div class="contact-container">
-        <nav class="about-nav">
-           <ul class="nav-list">
+        <nav class="contact-nav">
+           <ul class="contact-nav-list">
                <li><a href="home.html">Home</a></li>
                <li><a href="gallery.html">Gallery</a></li>
                <li><a href="pricing.html">Pricing</a></li>
                <li><a href="about.html">About</a></li>
-               <li><a href="contact.html">Contact Us</a></li>
+               <li><a class="current" href="contact.html">Contact Us</a></li>
            </ul>
+           <div class="contact-burger-icon">
+            <div class="line cLine1"></div>
+            <div class="line cLine2"></div>
+            <div class="line cLine3"></div>
+        </div>
         </nav>
 <div class="contact-information-container">
     <div class="contact-image-address-container">
@@ -31,21 +37,16 @@
     <div class="contact-form-container">
         <div class="contact-form">
             <h3>let's talk</h3>
-            <form action="index.html" class="formContactUs" method="POST" target="_blank" autocomplete="off">
+            <form action="#" class="formContactUs" method="POST" target="_blank" autocomplete="on">
                 <input type="text" name="name" id="name" placeholder="Name" required><br>
-                <input type="email" name="email" id="email"  placeholder="Email" required><br>
+                <input type="email" name="email" id="email"  placeholder="Email"  required><br>
                 <input type="number" name="number" id="cnumber"  placeholder="Contact Number" required><br>
                 <input type="text" name="event" id="eventInfo" placeholder="Event Description" required><br>
                 <input type="date" name="date" id="eventDate"  placeholder="Event Date" required><br>
                 <textarea cols="20" rows="10" name="message" id="message" placeholder="Tell me about it"></textarea> 
+                <button type="submit" name="button">Let's do it</button>
             </form>
-            <div class="contactForm-btn">
-                <button type="submit" name="button" >Let's do it</button>
-            </div>
         </div>
-        <!-- <div class="contactForm-btn">
-            <button type="button" name="button">Let's do it</button>
-        </div> -->
     </div>
 </div>
 <div class="about-footer">
@@ -55,5 +56,6 @@
         </div>
           </div>
         </div>
+        <script src="../js/contact.js"></script>
         </body>
         </html>

@@ -2,30 +2,37 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>About Us</title>
+    <title>Gallery</title>
     <link rel="stylesheet" href="../css/gallery.css">
+
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <script src="https://kit.fontawesome.com/2cbe9cfb18.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="gallery-wrapper">
     <div class="gallery-container">
         <nav class="gallery-nav">
-           <ul class="nav-list">
+           <ul class="gallery-nav-list">
                <li><a href="home.html">Home</a></li>
-               <li class="gallery-list"><a href="gallery.html">Gallery</a>
-               <div class="gallery-dropdown">
+               <li class="gallery-list"><a class="current" onclick="myList()">Gallery</a>
+               <div class="gallery-dropdown" >
                 <ul>
-                <li><a href="#">Event Gallery</a></li>
-                <li><a href="#">Nature Gallery</a></li>
-                <li><a href="#">Professional Gallery</a></li>
-                <li><a href="#">Others</a></li>
+                <li id="li-1"><a href="#" onclick="myEvent()">Event Gallery</a></li>
+                <li id="li-2"><a href="#" onclick="natureImg()">Nature Gallery</a></li>
+                <li id="li-3"><a href="#" onclick="professionalImg()">Professional Gallery</a></li>
+                <li id="li-4"><a href="#" onclick="otherImg()">Others</a></li>
                 </ul>
                 </div>
                 </li>
-               <li><a href="pricing.html">Pricing</a></li>
+               <li class="home1"><a href="pricing.html">Pricing</a></li>
                <li><a href="about.html">About</a></li>
                <li><a href="contact.html">Contact Us</a></li>
            </ul>
+           <div class="gallery-burger-icon">
+            <div class="line gLine1"></div>
+            <div class="line gLine2"></div>
+            <div class="line gLine3"></div>
+        </div>
         </nav>
         <div class="gallery-infromation-container">
         <div class="main-gallery">
@@ -42,27 +49,28 @@
                      memories and they rely on a brain region called the hippocampus.<br>
                     </p>
             </div>
-            <div class="gallery-family-image"></div>
+            <div class="gallery-family-image" ></div>
         </div>
         <div class="gallery-images-btn-footer-container">
         <div class="gallery-images">
-            <div class="event-images1"></div>
-            <div class="event-images2"></div>
-            <div class="event-images3"></div>
-            <div class="event-images4"></div>
-            <div class="event-images5"></div>
-            <div class="event-images6"></div>
+             <div id="event-images1" class="imgStyle"></div>
+            <div id="event-images2" class="imgStyle"></div>
+            <div id="event-images3" class="imgStyle"></div>
+            <div id="event-images4" class="imgStyle"></div>
+            <div id="event-images5" class="imgStyle"></div>
+            <div id="event-images6" class="imgStyle"></div>
             </div>
             
-            <div class="gallery-btn">
+            <!-- <div class="gallery-btn">
                 <button type="button">loading memories.......</button>
-            </div>
+            </div> -->
           <div class="gallery-footer">
             <div class="footer-copyright" id="footer-icon">Copyright © 2021  3rd eye Photography Montreal <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a> <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> </a> <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></div>     
 </div>
             </div>
 </div>   
-</div>    
+</div>  
+<script src="../js/gallery.js"></script>  
 </body>       
 </html>
                 

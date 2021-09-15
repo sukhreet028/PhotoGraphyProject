@@ -1,14 +1,25 @@
-var i=0;
-var imgArray=['../images/home2.jpeg','../images/hp10.jpeg','../images/hp2.jpeg','../images/hp11.jpeg','../images/hp9.jpeg','../images/hp7.jpeg'];
+
+
+// var i=0;
+// var imgArray=['../images/home2.jpeg','../images/hp10.jpeg','../images/hp2.jpeg','../images/hp11.jpeg','../images/hp9.jpeg','../images/hp7.jpeg'];
 var j=0;
 var imgArray1=['../images/a1.jpeg','../images/a3.jpeg','../images/a9.jpeg','../images/a0.png',];
-function slider(){
-    document.getElementById('homeImage').setAttribute('src',imgArray[i]);
-    if(i<imgArray.length- 1){
-        i++;
-    }else{
-        i=0;
-            }}
+
+function homeSlider(){
+    const Slides=document.getElementById('home-slides');
+const homeSlider= Slides.querySelector('.home-inner-slider');
+const pic = homeSlider.querySelectorAll('img');
+let index=0;
+            setInterval(function(){
+                index +=1;
+                if(index===pic.length){
+                    index=0;
+                }
+                console.log(index);
+                homeSlider.style.transform=`translated3d(${index * -1200},0,0)`;
+            },1500)
+        }
+        homeSlider('Slides');
     // setTimeout("slider()",1500);
 
    
@@ -20,12 +31,10 @@ function slider1(){
         j=0;
     }
     setTimeout(function(){
-        slider();
         slider1();
     },1500);}
 
 function bothSlider(){
-    slider();
     slider1();
 }
 window.onload=bothSlider;

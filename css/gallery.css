@@ -126,18 +126,52 @@ margin-top:30px;
     background-size: cover;
   
     }
+  
+    /* new changwe */
+    .gallery-tittle{
+        height: 75px;
+        background-color: lightyellow;
+        /* margin: auto; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .heading-text{
+        width: 50%;
+        color: rgb(63, 57, 57);
+        padding-left: 25px;
+        /* height: 30px; */
+/* background-color: limegreen; */
+    }
+    .select-list{
+        width: 50%;
+        /* height: 30px; */
+  /* background-color: mediumseagreen; */
+    }
+    #gallery{
+        height: 28px;
+        width: 250px;
+        border-radius: 6px;
+        border: none;
+        color: #937676;
+        font-size: 16px;
+        position: relative;
+    }
+
     .gallery-images-btn-footer-container{
         background-color:white;
         display: grid;
         height: 100%;
-        grid-template-rows: 900px 50px 50px;
+        grid-template-rows: 80px 900px 50px;
     }
     .gallery-images{
         width: 100%;  
          display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows:repeat(2,1fr);
-         grid-row-gap: 10px;
+         grid-row-gap: 20px;
          grid-column-gap: 90px;
          justify-content:space-evenly;
          align-items: center; 
@@ -164,9 +198,16 @@ margin-top:30px;
     .gallery-wrapper{
         overflow: hidden;
     }
+    .gallery-nav {
+        width: 100%;
+        position: relative;
+    }
     .gallery-nav-list{
         height: 126px;
-        width: 100%;
+        width: 25%;
+        position: absolute;
+        top: 50px;
+        right: -54px;
         background-color: white;
         display: block;
         text-align: center;
@@ -193,8 +234,8 @@ margin-top:30px;
         width: 63px;
         /* border: 2px solid black; */
         position: absolute;
-        top:2%;
-        left: 82%;
+        top: 10px;
+        right: -62px;
           border-radius: 5px;
         cursor: pointer;
         transition: 10ms ease-in-out;
@@ -221,10 +262,10 @@ margin-top:30px;
         
       }
       .btnClassGallery .gLine1{
-        transform: rotate(-45deg) translate(-1px,23px);
+        transform: rotate(-45deg) translate(-2px,23px);
       }
       .btnClassGallery .gLine3{
-        transform: rotate(45deg) translate(19px,-4px);
+        transform: rotate(45deg) translate(18px,-4px);
       }
       .main-gallery{
         display: block;

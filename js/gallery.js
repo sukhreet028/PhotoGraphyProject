@@ -28,7 +28,9 @@ window.onload=()=>{
 
 
 
-
+// const selectListDiv=document.querySelector('.select-list');
+const selectList=document.getElementById('gallery')
+//   selectList.addEventListener('change',myEvent);
 
 function myEvent(){
     eventGallery.map((data, index) => {
@@ -50,7 +52,6 @@ function myEvent(){
 // }
 // changeText();
 // }
-
 
 function professionalImg(){
    professionalGal.map((data,index)=>{

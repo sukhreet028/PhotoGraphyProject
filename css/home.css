@@ -116,13 +116,18 @@ body {
   background-color: transparent;
 }
 .open .line1 {
-  transform: rotate(-45deg) translate(-1px, 23px);
+  transform: rotate(-45deg) translate(-2px, 23px);
 }
 .open .line3 {
-  transform: rotate(45deg) translate(19px, -4px);
+  transform: rotate(45deg) translate(18px, -4px);
 }
 .current {
   color: black;
+}
+.current {
+  background-color: rgb(255, 255, 255);
+  border-radius: 14px;
+  padding: 4px 15px !important;
 }
 .container {
   width: 90%;
@@ -141,22 +146,26 @@ body {
 }
 
 .contact-us-btn-background {
-  position: absolute;
+  /* position: absolute; */
   width: 531px;
   height: 135px;
   background-color: rgb(234 232 233);
   border-radius: 8px;
-  top: -24px;
-  left: -41px;
+  /* top: -24px;
+  left: -41px; */
   z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-buttons {
-  height: 30px;
+  height: 50px;
   width: 423px;
   display: flex;
   justify-content: space-around;
-  margin-top: 10px;
+  margin-top: 18px;
 }
 .about-us-btn,
 .contact-us-btn {
@@ -252,14 +261,14 @@ body {
 }
 .achievement-slider-heading {
   height: 30px;
-  width: 65%;
+  width: 80%;
   margin: auto;
-  font-size: 25px;
+  font-size: 30px;
 }
 .achievement-slider {
   background-color: rgb(255, 255, 255);
-  width: 100%;
-  /* margin: auto; */
+  width: 75%;
+  margin: auto;
 }
 .awardImg {
   width: 100%;
@@ -267,7 +276,7 @@ body {
 }
 .award-expertise-projects-text-container {
   height: 550px;
-  width: 100%;
+  width: 80%;
   /* background-color: chartreuse; */
   display: flex;
   flex-direction: column;
@@ -285,17 +294,20 @@ body {
 .project-heading {
   height: 30px;
   /* background-color: burlywood; */
-  font-size: 20px;
+  font-size: 30px;
+  margin: 23px 0px;
+  text-transform: uppercase;
 }
 .award-name-description,
 .expertise-description,
 .project-description {
   height: 120px;
+  font-size: 20px;
   /* background-color: pink; */
 }
 .locate-us {
   height: 350px;
-  width: 100%;
+  width: 80%;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -304,7 +316,7 @@ body {
 }
 .locate-us-heading {
   height: 50px;
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
 }
 /* .locate-us-image {
@@ -315,7 +327,7 @@ body {
 .footer {
   height: 50px;
   width: 100%;
-  font-size: 10px;
+  margin-top: 10px;
 }
 .footer-copyright {
   text-align: center;

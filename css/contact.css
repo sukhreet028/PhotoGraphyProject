@@ -46,7 +46,7 @@
 .current {
   background-color: rgb(178, 216, 185);
   border-radius: 5px;
-  padding: 4px 14px;
+  padding: 4px 14px ;
 }
 .contact-information-container {
   height: 950px;
@@ -135,7 +135,7 @@
   }
 }
 .contact-form {
-  width: 100%;
+  width: 80%;
   height: 845px;
   background-color: rgb(54 54 54 / 65%);
   position: absolute;
@@ -165,18 +165,18 @@
     left:9%; */
 }
 input {
-  height: 35px;
-  width: 100%;
-  margin: 19px 0px;
-  font-size: 20px;
-  padding: 5px 0px;
+    height: 29px;
+    width: 85%;
+    margin: 19px 30px;
+    font-size: 20px;
+    padding: 5px 0px;
 }
 textarea {
   resize: vertical;
-  margin: 19px 0px;
+  margin: 19px 30px;
   font-size: 20px;
   color: black;
-  width: 100%;
+  width: 85%;
   height: 199px;
   padding: 5px 0px;
 }
@@ -285,14 +285,13 @@ textarea {
     background-color: transparent;
   }
   .btnClassContact .cLine1 {
-    transform: rotate(-45deg) translate(-1px, 23px);
+    transform: rotate(-45deg) translate(-2px, 23px);
   }
   .btnClassContact .cLine3 {
-    transform: rotate(45deg) translate(19px, -4px);
+    transform: rotate(45deg) translate(18px, -4px);
   }
   .contact-information-container {
     height: 770px;
-
     width: 100%;
   }
   .contact-container {

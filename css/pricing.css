@@ -188,8 +188,8 @@ div [type="box"]:hover{
     width: 63px;
     /* border: 2px solid black; */
     position: absolute;
-    top: 2%;
-    left: 88%;
+    top: 0%;
+    right: -15%;
     border-radius: 5px;
     cursor: pointer;
     transition: 10ms ease-in-out;

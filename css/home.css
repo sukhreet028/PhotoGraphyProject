@@ -2,6 +2,11 @@
   margin: 0px;
   padding: 0px;
 }
+
+body {
+  overflow-x: hidden;
+}
+
 .wrapper {
   height: auto;
   width: 100%;
@@ -353,4 +358,49 @@
   .photographerImg {
     display: none;
   }
+}
+
+.goOut {
+  animation: hide 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.comeIn {
+  animation: show 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#homeImage {
+  position: absolute;
+   width: 100vw;
+   height: 100vh;
+}
+
+#homeImage2 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes show {
+
+  0% {
+    left: 100vw;
+  }
+
+  100% {
+    left: 0vw;
+  }
+
+}
+@keyframes hide {
+
+  0% {
+    left: 0vw;
+  }
+
+  100% {
+    left: -100vw;
+  }
+
 }

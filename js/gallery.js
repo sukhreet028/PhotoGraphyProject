@@ -135,11 +135,13 @@ function showGalleryImg(galleryType) {
 
 const showImages = (galleryType) => {
   imageCurrentArray.map((data, index) => {
-    const imageDiv = document.getElementById('D' + index);
-    gallery.removeChild(imageDiv);
-    if (index + 1 === imageCurrentArray.length) {
-      imageCurrentArray = galleryType;
-      addImagesToGallery();
+    if (index > 1) {
+      const imageDiv = document.getElementById('D' + index);
+      gallery.removeChild(imageDiv);
+      if (index + 1 === imageCurrentArray.length) {
+        imageCurrentArray = galleryType;
+        addImagesToGallery();
+      }
     }
   });
 };
@@ -202,7 +204,7 @@ const showGallery = () => {
 
 const leftMove = () => {
   const largeImg = document.getElementById('main-image');
-  if (currentLargeImage <= 0) {
+  if (currentLargeImage <= 2) {
     largeImg.setAttribute('src', imageCurrentArray[currentLargeImage]);
   } else {
     largeImg.setAttribute('src', imageCurrentArray[currentLargeImage - 1]);

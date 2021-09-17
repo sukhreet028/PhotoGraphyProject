@@ -61,29 +61,30 @@ window.onload = () => {
   addImagesToGallery();
 };
 
-const addImagesToGallery = ()=> {
+const addImagesToGallery = () => {
   imageCurrentArray.map((data, index) => {
-    const imageComponent = document.createElement('img');
-    const imageDiv = document.createElement('div');
-    imageComponent.setAttribute('alt', 'image');
-    imageComponent.setAttribute('id', index);
-    imageComponent.setAttribute('src', data);
-    imageDiv.setAttribute('id', 'D' + index);
-    setTimeout(() => {
-      document
-        .getElementById(index)
-        .addEventListener('click', () => showFullSIzeImage(data, index));
-    }, 1000);
-    imageDiv.appendChild(imageComponent);
-    gallery.appendChild(imageDiv);
-    console.log(data);
     if (index < 2) {
       var img1 = document.getElementById(`event-images${index + 1}`);
       console.log(img1);
       img1.style.backgroundImage = "url('" + data + "')";
+    } else {
+      const imageComponent = document.createElement('img');
+      const imageDiv = document.createElement('div');
+      imageComponent.setAttribute('alt', 'image');
+      imageComponent.setAttribute('id', index);
+      imageComponent.setAttribute('src', data);
+      imageDiv.setAttribute('id', 'D' + index);
+      setTimeout(() => {
+        document
+          .getElementById(index)
+          .addEventListener('click', () => showFullSIzeImage(data, index));
+      }, 1000);
+      imageDiv.appendChild(imageComponent);
+      gallery.appendChild(imageDiv);
+      console.log(data);
     }
   });
-}
+};
 // function changeText(){
 //     const msg=document.getElementById('gallery-quote');
 //     msg.innerHTML=`"Sometimes, challenges and struggles are exactly what we need in our lives...
@@ -133,16 +134,14 @@ function showGalleryImg(galleryType) {
 }
 
 const showImages = (galleryType) => {
-  imageCurrentArray.map((data,index)=> {
-    const imageDiv = document.getElementById('D'+index);
+  imageCurrentArray.map((data, index) => {
+    const imageDiv = document.getElementById('D' + index);
     gallery.removeChild(imageDiv);
-    if( index + 1 === imageCurrentArray.length) {
+    if (index + 1 === imageCurrentArray.length) {
       imageCurrentArray = galleryType;
       addImagesToGallery();
     }
   });
-  
-  
 };
 let gallerybtn = false;
 const galleryList = document.querySelector('.gallery-nav');
@@ -190,16 +189,15 @@ const showFullSIzeImage = (data, id) => {
 
 const showGallery = () => {
   const prevImage = document.getElementById('moveImage');
-    prevImage.setAttribute('href','#D'+previousImage);
-    prevImage.click()
+  prevImage.setAttribute('href', '#D' + previousImage);
+  prevImage.click();
   const largeImgWrapper = document.getElementById('main-image-wrapper');
   document.getElementById('gallery-container').style.display = null;
   largeImgWrapper.style.display = null;
-  
-  setTimeout(()=> {
+
+  setTimeout(() => {
     largeImgWrapper.style.display = null;
-  },500);
-  
+  }, 500);
 };
 
 const leftMove = () => {
@@ -213,14 +211,13 @@ const leftMove = () => {
 };
 
 const rightMove = () => {
-    const largeImg = document.getElementById('main-image');
+  const largeImg = document.getElementById('main-image');
   if (currentLargeImage + 1 === imageCurrentArray.length) {
     largeImg.setAttribute('src', imageCurrentArray[currentLargeImage]);
   } else {
-      largeImg.setAttribute('src', imageCurrentArray[currentLargeImage + 1]);
-  currentLargeImage = currentLargeImage + 1;
+    largeImg.setAttribute('src', imageCurrentArray[currentLargeImage + 1]);
+    currentLargeImage = currentLargeImage + 1;
   }
-  
 };
 
 //  function showList(index){

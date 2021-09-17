@@ -51,27 +51,27 @@
 .contact-information-container {
   height: 950px;
   width: 100%;
-  margin: auto;
   /* background-color: grey; */
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center
 }
 
 .contact-image-address-container {
-  width: 50%;
-  height: 900px;
+  width: 100%;
+  height: 845px;
+  max-width: 500px;
   /* background-color: khaki; */
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  margin: auto;
+  justify-content: space-between;
+  margin-right: 16px;
 }
 .contact-image-container {
   height: 650px;
-  width: 80%;
+  width: 100%;
   /* background-color: lightpink; */
-  margin-left: 55px;
   background-image: url('../images/contactImage.jpeg');
   background-position: center;
   background-size: cover;
@@ -90,9 +90,8 @@
 }
 .contact-address-container {
   height: 120px;
-  width: 80%;
+  width: 100%;
   background-color: rgb(54 54 54 / 65%);
-  margin-left: 55px;
   text-align: center;
   font-size: 20px;
   padding-top: 15px;
@@ -107,7 +106,7 @@
     bottom: -400px;
   }
   100% {
-    bottom: 5px;
+    bottom: 0px;
   }
 }
 #email-address a {
@@ -118,10 +117,12 @@
   color: white;
 }
 .contact-form-container {
-  width: 50%;
+  width: 100%;
   /* background-color:rgb(68, 99, 68); */
   display: flex;
   position: relative;
+  max-width: 500px;
+  margin-left: 16px;
   animation-name: form-container;
   animation-duration: 2s;
   animation-iteration-count: 1;
@@ -131,16 +132,16 @@
     right: -900px;
   }
   100% {
-    right: 10px;
+    right: 0px;
   }
 }
 .contact-form {
-  width: 80%;
+  width: 100%;
   height: 845px;
   background-color: rgb(54 54 54 / 65%);
-  position: absolute;
+  /* position: absolute;
   top: 6%;
-  left: 2%;
+  left: 2%; */
 }
 /* @media (max-width: 1400px) {
     .contact-form{
@@ -158,27 +159,36 @@
 .formContactUs {
   /* background-color: thistle; */
   height: 700px;
-  width: 90%;
-  margin: auto;
+  width: 100%;
   /* position: relative;
     top: 7%;
     left:9%; */
 }
 input {
-    height: 29px;
-    width: 85%;
-    margin: 19px 30px;
-    font-size: 20px;
-    padding: 5px 0px;
+  height: 29px;
+  width: 85%;
+  margin: 19px 0px;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 2px;
+  border: none;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 textarea {
   resize: vertical;
-  margin: 19px 30px;
+  margin: 19px 0px;
   font-size: 20px;
   color: black;
   width: 85%;
   height: 199px;
-  padding: 5px 0px;
+  padding: 5px;
+  border-radius: 2px;
+  border: none;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 /* .contactForm-btn {
     height: 40px; */
@@ -203,8 +213,9 @@ textarea {
 }
 .contact-footer {
   height: 30px;
-  width: 70%;
+  width: 100%;
   margin: 0px auto;
+  text-align: center;
   /* background-color: turquoise; */
   position: relative;
   animation-name: footer-animation;
@@ -219,9 +230,7 @@ textarea {
     bottom: 0px;
   }
 }
-.contact-footer {
-  text-align: center;
-}
+
 #contact-footer-icon a {
   text-decoration: none;
   color: black;
@@ -259,7 +268,7 @@ textarea {
     /* border: 2px solid black; */
     position: absolute;
     top: 2%;
-    left: 93%;
+    right: 0px;
     border-radius: 5px;
     cursor: pointer;
     transition: 10ms ease-in-out;
@@ -290,7 +299,7 @@ textarea {
   .btnClassContact .cLine3 {
     transform: rotate(45deg) translate(18px, -4px);
   }
-  .contact-information-container {
+  /* .contact-information-container {
     height: 770px;
     width: 100%;
   }
@@ -302,7 +311,6 @@ textarea {
     width: 50%;
     margin: 0px;
     height: 760px;
-    /* height: 800px; */
   }
   .contact-form-container {
     width: 60%;
@@ -320,60 +328,31 @@ textarea {
     position: absolute;
     top: -1%;
     left: 0%;
-  }
+  } */
   .contact-form h3 {
     margin-top: 12px;
   }
-  .contact-address-container {
-    margin: 10px 55px;
-  }
-  input {
-    height: 27px;
-    width: 368px;
-    margin: 15px 19px 16px 70px;
-  }
-  textarea {
-    margin: 10px 19px 16px 70px;
-  }
-  .contact-footer {
-    /* position: absolute;
-        bottom: 8%;
-        left: 13%; */
-    margin: 30px auto;
-  }
-  /* .contact-form button {
-        height: 36px;
-        width: 212px;
-        margin: 0px 32px 19px 149px;
-    } */
-  /*.contact-form-container{
-        width: 100%;
-        margin-right: 90%; */
-  /* display: block; */
 }
 
-@media (max-width: 770px) {
+@media (max-width: 810px) {
   .contact-form {
-    width: 519px;
-    height: 765px;
+    width: calc(100vw - 2rem);
+    max-width: 590px;
     background-image: url('../images/contactImage.jpeg');
     background-position: center;
     background-size: cover;
-    position: absolute;
+    /* position: absolute;
     top: -2%;
-    left: 1%;
+    left: 1%; */
   }
   .contact-image-address-container {
     display: none;
   }
   .contact-information-container {
-    height: 712px;
-    width: 68%;
+    height: auto;
   }
   .contact-footer {
-    position: absolute;
-    bottom: 8%;
-    left: 13%;
+    margin-top: 2rem;
   }
 }
 
@@ -381,22 +360,17 @@ textarea {
   .contact-burger-icon {
     position: absolute;
     top: 2%;
-    left: 82%;
-  }
-  .contact-information-container {
-    height: 487px;
-    width: 76%;
+    right: 0px;
   }
   .contact-form-container {
     width: 100%;
-    height: 100%;
   }
   .contact-form {
-    width: 342px;
+    width: 100%;
     height: 529px;
-    position: absolute;
+    /* position: absolute;
     top: -2%;
-    left: -8%;
+    left: -8%; */
     background: transparent;
   }
   .contact-form h3 {
@@ -405,16 +379,18 @@ textarea {
     color: black;
   }
   input {
-    height: 13px;
-    width: 250px;
-    margin: 8px 1px 15px 36px;
+    height: 20px;
+    width: 100%;
+    margin: 8px 0px;
     font-size: 11px;
+    background-color: lightblue;
   }
   textarea {
     height: 110px;
-    width: 250px;
+    width: 100%;
     font-size: 11px;
-    margin: 8px 1px 15px 36px;
+    margin: 8px 0px;
+    background-color: lightblue;
   }
   .contact-form button {
     height: 35px;
@@ -422,20 +398,12 @@ textarea {
     color: white;
     background-color: #171616;
     /* border: 2px solid rgb(173, 216, 173); */
-    border-radius: 10%;
-    font-size: 15px;
+    border-radius: 8px;
+    font-size: 12px;
     text-transform: uppercase;
-    margin: 16px 30px 13px 100px;
+    margin: 16px 0px;
   }
   .contact-footer {
-    height: 30px;
-    width: 100%;
-    /* margin: 50px 0px 39px -55px; */
     font-size: 12px;
-    /* margin: 30px auto; */
-
-    position: absolute;
-    bottom: 16%;
-    left: -2%;
   }
 }

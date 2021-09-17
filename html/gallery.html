@@ -1,94 +1,108 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
-    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Gallery</title>
     <link rel="stylesheet" href="../css/gallery.css">
     <script src="https://kit.fontawesome.com/2cbe9cfb18.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-<div class="gallery-wrapper">
-    <div class="gallery-container">
-        <nav class="gallery-nav">
-           <ul class="gallery-nav-list">
-               <li><a href="home.html">Home</a></li>
-               <li class="gallery-list"><a class="current" onclick="myList()">Gallery</a>
-               <div class="gallery-dropdown" >
-                <ul>
-                <li id="li-1"><a href="#" >Event Gallery</a></li>
-                <li id="li-2"><a href="#" onclick="natureImg()">Nature Gallery</a></li>
-                <li id="li-3"><a href="#" >Professional Gallery</a></li>
-                <li id="li-4"><a href="#" onclick="otherImg()">Others</a></li>
+    <div class="gallery-wrapper">
+        <a id="moveImage"></a>
+        <div class="large-image-wrapper" id="main-image-wrapper">
+            <button type="button" onclick="showGallery()" id="closeButton">X</button>
+            <button type="button" onclick="leftMove()" id="leftButton">Left</button>
+            <button type="button" onclick="rightMove()" id="rightButton">Right</button>
+            <img alt="main image" id="main-image" />
+        </div>
+        <div class="gallery-container" id="gallery-container">
+            <nav class="gallery-nav">
+                <ul class="gallery-nav-list">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="gallery-list"><a class="current" onclick="myList()">Gallery</a>
+                    </li>
+                    <li class="home1"><a href="pricing.html">Pricing</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
+                <div class="gallery-burger-icon">
+                    <div class="line gLine1"></div>
+                    <div class="line gLine2"></div>
+                    <div class="line gLine3"></div>
                 </div>
-                </li>
-               <li class="home1"><a href="pricing.html">Pricing</a></li>
-               <li><a href="about.html">About</a></li>
-               <li><a href="contact.html">Contact Us</a></li>
-           </ul>
-           <div class="gallery-burger-icon">
-            <div class="line gLine1"></div>
-            <div class="line gLine2"></div>
-            <div class="line gLine3"></div>
-        </div>
-        </nav>
-        <div class="gallery-infromation-container">
-        <div class="main-gallery">
-            <div id="event-images1"></div>
-            <div id="gallery-quote">
-                <h1 id="gallery-heading">Gallery</h1>
-                <p id="gallery-para">Memories of our experiences connect with one another and <br>
-                    they are the basis of who we are as individuals.<br>
-                    Memories of our experiences are called autobiographical<br>
-                     memories and they rely on a brain region called the hippocampus.<br>
-                     Memories of our experiences connect with one another and <br>
-                    they are the basis of who we are as individuals.<br>
-                    Memories of our experiences are called autobiographical<br>
-                     memories and they rely on a brain region called the hippocampus.<br>
-                    </p>
-            </div>
-            <div id="event-images2"></div>
-            
-        </div>
-        <!-- <div class="gallery-tittle">
+            </nav>
+            <div class="gallery-infromation-container">
+                <div class="main-gallery">
+                    <div id="event-images1"></div>
+                    <div id="gallery-quote">
+                        <h1 id="gallery-heading">Gallery</h1>
+                        <p id="gallery-para">Memories of our experiences connect with one another and <br>
+                            they are the basis of who we are as individuals.<br>
+                            Memories of our experiences are called autobiographical<br>
+                            memories and they rely on a brain region called the hippocampus.<br>
+                            Memories of our experiences connect with one another and <br>
+                            they are the basis of who we are as individuals.<br>
+                            Memories of our experiences are called autobiographical<br>
+                            memories and they rely on a brain region called the hippocampus.<br>
+                        </p>
+                    </div>
+                    <div id="event-images2"></div>
+                </div>
+                <!-- <div class="gallery-tittle">
             <div class="heading-text">headinghshghg </div>
             <div class="select-list">select list</div>
         </div> -->
-        <div class="gallery-images-btn-footer-container">
-            <div class="gallery-tittle">
-                <div class="heading-text">Explore other event shoot </div>
-                <div class="select-list">
-                    <select id="gallery">
-                        <option   value="Occasion Gallery" selected >Occasion Gallery</option>
-                        <option value="Event Gallery" onchange="myEvent()">Event Gallery</option>
-                        <option  value="Nature Gallery">Nature Gallery</option>
-                        <option  value="Professional Gallery" onchange="professionalImg()">Professional Gallery</option>
-                        <option  value="Others">Others</option>
-                      </select>
-                    </div>    
-            </div>
-        <div class="gallery-images">
-             <div id="event-images3" class="imgStyle"></div>
-            <div id="event-images4" class="imgStyle"></div>
-            <div id="event-images5" class="imgStyle"></div>
-            <div id="event-images6" class="imgStyle"></div>
-            <div id="event-images7" class="imgStyle"></div>
-            <div id="event-images8" class="imgStyle"></div>
-            </div>
-            
-            <!-- <div class="gallery-btn">
+                <div class="gallery-images-btn-footer-container">
+                    <div class="gallery-tittle">
+                        <div class="heading-text">Explore other event shoot </div>
+                        <div class="select-list">
+                            <button type="button" onclick="showGalleryOptions()"> Select </button>
+                            <div class="gallery-dropdown" id="option-list">
+                                <ul>
+                                    <li id="li-1"><a href="#" onclick="showGalleryImg('eventGal')">Event Gallery</a></li>
+                                    <li id="li-2"><a href="#" onclick="showGalleryImg('natureGal')">Nature Gallery</a></li>
+                                    <li id="li-3"><a href="#" onclick="showGalleryImg('proGal')">Professional Gallery</a></li>
+                                    <li id="li-4"><a href="#" onclick="showGalleryImg('otherGal')">Others</a></li>
+                                </ul>
+                            </div>
+                            <!-- <select id="gallery">
+                                <option value="Occasion Gallery" selected>Occasion Gallery</option>
+                                <option value="Event Gallery" onchange="myEvent()">Event Gallery</option>
+                                <option value="Nature Gallery">Nature Gallery</option>
+                                <option value="Professional Gallery" onchange="professionalImg()">Professional Gallery
+                                </option>
+                                <option value="Others">Others</option>
+                            </select> -->
+                        </div>
+                    </div>
+                    <div class="gallery-images">
+
+                        <!-- <div onclick="showFullSIzeImage('event-images')" id="event-images3" class="imgStyle"></div>
+                        <div onclick="showFullSIzeImage('event-images')" id="event-images4" class="imgStyle"></div>
+                        <div onclick="showFullSIzeImage('event-images')" id="event-images5" class="imgStyle"></div>
+                        <div onclick="showFullSIzeImage('event-images')" id="event-images6" class="imgStyle"></div>
+                        <div onclick="showFullSIzeImage('event-images')" id="event-images7" class="imgStyle"></div>
+                        <div onclick="showFullSIzeImage('event-images')" id="event-images8" class="imgStyle"></div> -->
+                    </div>
+
+                    <!-- <div class="gallery-btn">
                 <button type="button">loading memories.......</button>
             </div> -->
-          <div class="gallery-footer">
-            <div class="footer-copyright" id="footer-icon">Copyright © 2021  3rd eye Photography Montreal <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a> <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> </a> <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></div>     
-</div>
+                    <div class="gallery-footer">
+                        <div class="footer-copyright" id="footer-icon">Copyright © 2021 3rd eye Photography Montreal <a
+                                href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a> <a
+                                href="https://www.instagram.com/"><i class="fab fa-instagram"></i> </a> <a
+                                href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></div>
+                    </div>
+                </div>
             </div>
-</div>   
-</div>  
-<script src="../js/gallery.js"></script>  
-</body>       
+        </div>
+        <script src="../js/gallery.js"></script>
+</body>
+
 </html>
-                

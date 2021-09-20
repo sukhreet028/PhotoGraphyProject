@@ -59,8 +59,12 @@
   margin-top: 40px;
   /* position: relative;
    top: 22%; */
+  transition: all 1s ease-in-out;
 }
-
+div [type="box"]:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
 .bronze-package-text,
 .silver-package-text,
 .platinum-package-text,
@@ -152,18 +156,20 @@ div [type="box"]:hover{
   .pricing-wrapper {
     overflow: hidden;
   }
+
   .pricing-nav {
     margin-bottom: 33px;
     position: relative;
+    z-index: 1;
   }
   .pricing-nav-list {
-    height: 126px;
-    width: 19%;
+    height: 160px;
+    width: 30%;
     position: absolute;
-    top: 60px;
-    right: -16px;
-    left: 85%;
-    background-color: white;
+    top: 46px;
+    right: -46px;
+    border-radius: 6px;
+    background-color: rgb(8, 8, 8);
     display: block;
     text-align: center;
     opacity: 0;
@@ -171,10 +177,20 @@ div [type="box"]:hover{
     transform: translateX(600px);
     pointer-events: none;
   }
+  .pricing-nav-list li {
+    list-style: none;
+    /* font-size: 34px; */
+    height: 33px;
+    width: 100%;
+  }
   .pricing-nav-list li a {
-    font-size: 13px;
+    font-size: 15px;
     padding: 4px;
-    color: black;
+    color: #997777;
+  }
+  .pricing-nav-list li a:hover {
+    color: rgb(243, 236, 236);
+    cursor: pointer;
   }
   .pricingMenu .pricing-nav-list {
     opacity: 1;
@@ -183,13 +199,16 @@ div [type="box"]:hover{
     transform: translateX(0px);
     pointer-events: all;
   }
+  .current {
+    background-color: #9977779c;
+  }
   .pricing-burger-icon {
     height: 41px;
     width: 63px;
     /* border: 2px solid black; */
     position: absolute;
-    top: 0%;
-    right: -15%;
+    top: 0px;
+    right: -60px;
     border-radius: 5px;
     cursor: pointer;
     transition: 10ms ease-in-out;
@@ -223,6 +242,7 @@ div [type="box"]:hover{
   .pricing-information-container {
     width: 100%;
     display: grid;
+
     grid-gap: 20px;
     grid-template-columns: repeat(2, 340px);
     grid-template-rows: repeat(2, 232px);
@@ -274,10 +294,39 @@ div [type="box"]:hover{
   .pricing-wrapper {
     overflow: hidden;
   }
+  .pricing-nav-list {
+    height: 160px;
+    width: 100%;
+    position: absolute;
+    border-radius: 6px;
+    top: 23px;
+    right: 2px;
+    z-index: 1;
+    display: block;
+    background-color: rgb(8, 8, 8);
+    transition: 1000ms;
+    transform: translateY(-260px);
+    pointer-events: none;
+  }
+  .pricing-nav-list li {
+    list-style: none;
+    /* font-size: 34px; */
+    height: 33px;
+    width: 100%;
+  }
+  .pricing-nav-list li a {
+    font-size: 13px;
+  }
+  .pricingMenu .pricing-nav-list {
+    transition: 1000ms;
+    /* background-color: lightgray; */
+    transform: translateY(10px);
+    pointer-events: all;
+  }
   .pricing-burger-icon {
     position: absolute;
-    top: 2%;
-    left: 78%;
+    top: 0px;
+    right: -45px;
   }
   .pricing-information-container {
     width: 100%;

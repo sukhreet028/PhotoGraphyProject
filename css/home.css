@@ -88,8 +88,8 @@ body {
   width: 63px;
   /* border: 2px solid black; */
   position: absolute;
-  top: 3%;
-  left: 95%;
+  top: 16px;
+  right: 10px;
   background-color: lightgrey;
   border-radius: 5px;
   cursor: pointer;
@@ -121,9 +121,7 @@ body {
 .open .line3 {
   transform: rotate(45deg) translate(18px, -4px);
 }
-.current {
-  color: black;
-}
+
 .current {
   background-color: rgb(255, 255, 255);
   border-radius: 14px;
@@ -224,7 +222,7 @@ body {
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   /* margin: auto; */
   /* background-color: cornflowerblue; */
 }
@@ -337,41 +335,6 @@ body {
   color: black;
 }
 
-@media (max-width: 550px) {
-  .burger-icon {
-    position: absolute;
-    top: 2%;
-    left: 82%;
-  }
-  .homepage {
-    background-color: #ebadad2e;
-    height: 140px;
-    width: 80%;
-  }
-  .about-us-btn,
-  .contact-us-btn {
-    border: 3px solid rgb(101, 158, 101);
-    height: 47px;
-    width: 131px;
-    background-color: transparent;
-    font-size: 16px;
-  }
-  .photographer-intro-container {
-    height: 345px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .introduction-text {
-    color: rgb(0, 0, 0);
-    text-align: center;
-    font-size: 13px;
-  }
-  .photographerImg {
-    display: none;
-  }
-}
-
 .goOut {
   animation: hide 1s ease-in-out;
   animation-fill-mode: forwards;
@@ -384,8 +347,8 @@ body {
 
 #homeImage {
   position: absolute;
-   width: 100vw;
-   height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 #homeImage2 {
@@ -395,7 +358,6 @@ body {
 }
 
 @keyframes show {
-
   0% {
     left: 100vw;
   }
@@ -403,10 +365,8 @@ body {
   100% {
     left: 0vw;
   }
-
 }
 @keyframes hide {
-
   0% {
     left: 0vw;
   }
@@ -414,5 +374,170 @@ body {
   100% {
     left: -100vw;
   }
-
+}
+@media (max-width: 840px) {
+  .introduction-text {
+    height: 100px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 17px;
+    margin: auto;
+  }
+  .photographer-intro-container {
+    width: 100%;
+    height: 750px;
+  }
+  .achievement-slider-heading {
+    width: 100%;
+    margin: auto;
+    font-size: 20px;
+  }
+  .achievement-slider {
+    width: 95%;
+  }
+  .award-expertise-projects-text-container {
+    height: 350px;
+    width: 100%;
+  }
+  .awards,
+  .expertise,
+  .our-projects {
+    height: 110px;
+  }
+  .award-heading,
+  .expertise-heading,
+  .project-heading {
+    font-size: 20px;
+    margin: 3px 0px;
+    text-transform: uppercase;
+  }
+  .award-name-description,
+  .expertise-description,
+  .project-description {
+    font-size: 15px;
+  }
+  .locate-us {
+    /* height: 350px; */
+    width: 100%;
+  }
+  .locate-us-heading {
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+@media (max-width: 587px) {
+  .burger-icon {
+    height: 40px;
+    width: 60px;
+    position: absolute;
+    top: 1%;
+    left: 87%;
+  }
+  .home-nav-list {
+    width: 70%;
+  }
+  .nav-list {
+    height: 100px;
+    width: 50%;
+    position: absolute;
+    top: 60px;
+    right: 1px;
+    background-color: lightgray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .nav-list li {
+    list-style: none;
+    font-size: 28px;
+    height: 30px;
+  }
+  .nav-list a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    padding: 25px;
+    font-size: 12px;
+  }
+  /* .current {
+    background-color: rgb(255, 255, 255);
+    border-radius: 14px;
+    padding: 4px 15px !important;
+  } */
+  /* .homepage {
+    background-color: #e21e1e2e;
+    height: 100px;
+    width: 80%;
+  } */
+  .contact-us-btn-background {
+    width: 310px;
+    height: 90px;
+  }
+  .contact-us-btn-background,
+  h2 {
+    font-size: 13px;
+    padding: 0px;
+    margin-top: 20px;
+  }
+  .about-us-btn,
+  .contact-us-btn {
+    border: 3px solid rgb(101, 158, 101);
+    height: 47px;
+    width: 131px;
+    background-color: transparent;
+    font-size: 16px;
+  }
+  .home-buttons {
+    height: 50px;
+    width: 260px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .home-buttons button {
+    width: 107px;
+    height: 30px;
+    margin: -9px 20px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+  .photographer-intro-container {
+    height: 240px;
+    background-color: azure;
+  }
+  .introduction-text {
+    color: rgb(142 73 73);
+    text-align: center;
+    font-size: 11px;
+  }
+  .photographerImg {
+    display: none;
+  }
+  .awardImg {
+    width: 100%;
+    height: 275px;
+  }
+  .achievements-slider-container {
+    height: 350px;
+  }
+  .award-heading,
+  .expertise-heading,
+  .project-heading {
+    font-size: 15px;
+    /* margin: 3px 0px;
+    text-transform: uppercase; */
+  }
+  .award-name-description,
+  .expertise-description,
+  .project-description {
+    font-size: 10px;
+  }
+  .footer-copyright {
+    text-align: center;
+    font-size: 13px;
+  }
 }

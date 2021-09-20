@@ -8,6 +8,8 @@
         content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Gallery</title>
     <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <script src="https://kit.fontawesome.com/2cbe9cfb18.js" crossorigin="anonymous"></script>
 </head>
 
@@ -15,9 +17,9 @@
     <div class="gallery-wrapper">
         <a id="moveImage"></a>
         <div class="large-image-wrapper" id="main-image-wrapper">
-            <button type="button" onclick="showGallery()" id="closeButton">X</button>
-            <button type="button" onclick="leftMove()" id="leftButton">Left</button>
-            <button type="button" onclick="rightMove()" id="rightButton">Right</button>
+            <button type="button" onclick="showGallery()" id="closeButton"><span class="close-btn">&times;</span></button>
+            <button type="button" onclick="leftMove()" id="leftButton"><i class="fa fa-angle-double-left" style="font-size:80px"></i></button>
+            <button type="button" onclick="rightMove()" id="rightButton"><i class="fa fa-angle-double-right" style="font-size:80px"></i></button>
             <img alt="main image" id="main-image" />
         </div>
         <div class="gallery-container" id="gallery-container">
@@ -45,7 +47,8 @@
                             they are the basis of who we are as individuals.<br>
                             Memories of our experiences are called autobiographical<br>
                             memories and they rely on a brain region called the hippocampus.<br>
-                            Memories of our experiences connect with one another and <br>
+                            Memories of our experiences 
+                            connect with one another and <br>
                             they are the basis of who we are as individuals.<br>
                             Memories of our experiences are called autobiographical<br>
                             memories and they rely on a brain region called the hippocampus.<br>
@@ -57,11 +60,12 @@
             <div class="heading-text">headinghshghg </div>
             <div class="select-list">select list</div>
         </div> -->
+       
                 <div class="gallery-images-btn-footer-container">
                     <div class="gallery-tittle">
                         <div class="heading-text">Explore other event shoot </div>
                         <div class="select-list">
-                            <button type="button" onclick="showGalleryOptions()"> Select </button>
+                            <button type="button" onclick="showGalleryOptions()"> Occasion Gallery </button>
                             <div class="gallery-dropdown" id="option-list">
                                 <ul>
                                     <li id="li-1"><a href="#" onclick="showGalleryImg('eventGal')">Event Gallery</a></li>
@@ -70,14 +74,6 @@
                                     <li id="li-4"><a href="#" onclick="showGalleryImg('otherGal')">Others</a></li>
                                 </ul>
                             </div>
-                            <!-- <select id="gallery">
-                                <option value="Occasion Gallery" selected>Occasion Gallery</option>
-                                <option value="Event Gallery" onchange="myEvent()">Event Gallery</option>
-                                <option value="Nature Gallery">Nature Gallery</option>
-                                <option value="Professional Gallery" onchange="professionalImg()">Professional Gallery
-                                </option>
-                                <option value="Others">Others</option>
-                            </select> -->
                         </div>
                     </div>
                     <div class="gallery-images">
@@ -90,14 +86,16 @@
                         <div onclick="showFullSIzeImage('event-images')" id="event-images8" class="imgStyle"></div> -->
                     </div>
 
-                    <!-- <div class="gallery-btn">
-                <button type="button">loading memories.......</button>
-            </div> -->
+                    <div class="gallery-button">
+                <button type="button" class="gallery-btn" id="imgButton" onclick="showMoreImg()">
+                    LOADING MEMORIES...</button>
+            </div>
                     <div class="gallery-footer">
-                        <div class="footer-copyright" id="footer-icon">Copyright © 2021 3rd eye Photography Montreal <a
-                                href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a> <a
-                                href="https://www.instagram.com/"><i class="fab fa-instagram"></i> </a> <a
-                                href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></div>
+                        <div class="footer-copyright" id="footer-icon">Copyright © 2021 3rd eye Photography Montreal 
+                            
+                            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a> 
+                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> </a> 
+                            <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></div>
                     </div>
                 </div>
             </div>

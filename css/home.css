@@ -3,6 +3,10 @@
   padding: 0px;
 }
 
+p,h1,h2 {
+  font-family: Poppins !important;
+}
+
 body {
   overflow-x: hidden;
 }

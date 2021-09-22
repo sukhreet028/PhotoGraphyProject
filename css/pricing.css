@@ -1,11 +1,11 @@
 * {
   margin: 0px;
   padding: 0px;
+  font-family: Poppins;
 }
 .pricing-wrapper {
   height: 100%;
   width: 100%;
-  /* background-color: rgb(119, 18, 18); */
 }
 .pricing-container {
   width: 80%;
@@ -17,12 +17,9 @@
 }
 .pricing-nav {
   width: 100%;
-  /* background-color: rgb(202, 202, 9); */
-  /* margin-top: 20px; */
 }
 .pricing-nav-list {
   height: 50px;
-  /* width: 100%; */
   background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-evenly;
@@ -31,14 +28,12 @@
 .pricing-nav-list li {
   list-style: none;
   font-size: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  /* padding: 10px 95px; */
 }
 .pricing-nav-list a {
   text-decoration: none;
   color: rgb(101, 158, 101);
   text-transform: uppercase;
+  font-family: Poppins;
 }
 .pricing-nav-list li a:hover {
   color: rgb(0, 0, 0);
@@ -52,7 +47,8 @@
 
 .pricing-information-container {
   display: grid;
-  grid-template-columns: repeat(2, 500px);
+  grid-template-columns: repeat(2, 450px);
+  grid-template-rows: repeat(2, 300px);
   justify-content: center;
   align-items: center;
   grid-gap: 25px;
@@ -69,12 +65,16 @@ div [type="box"]:hover {
 .silver-package-text,
 .platinum-package-text,
 .basicHourly-package-text {
-  height: 300px;
-  width: 500px;
-  text-align: center;
-  color: rgb(10 10 10);
+  /* height: 300px;
+  width: 500px; */
   background-color: #e6e1c1;
-  padding-top: 50px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6e1c1;
 }
 .silver-package-text {
   background-color: rgb(227 246 249);
@@ -88,14 +88,12 @@ div [type="box"]:hover {
 }
 .price-heading {
   height: 50px;
-  font-size: 1.7vw;
+  font-size: 2.1vw;
 }
 .package-information {
-  font-size: 1.5vw;
+  font-size: 1vw;
 }
 .booking-button {
-  height: 60px;
-  /* background-color: cadetblue; */
   margin: auto;
 }
 .booking-button a {
@@ -109,7 +107,7 @@ div [type="box"]:hover {
   color: white;
   background-color: rgb(49, 49, 49);
   border: none;
-  position: relative;
+  /* position: relative; */
   font-size: 20px;
   margin-top: 30px;
   border-radius: 2%;
@@ -138,9 +136,12 @@ div [type="box"]:hover{
   background-color: rgb(137, 190, 137);
 }
 .pricing-footer {
-  height: 60px;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  /* height: 60px;
   width: 63%;
-  margin: 40px 0px 10px auto;
+  margin: 40px 0px 10px auto; */
   /* background-color: turquoise; */
 }
 .pricing-footer-copyright {
@@ -152,7 +153,7 @@ div [type="box"]:hover{
   color: black;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 947px) {
   .pricing-wrapper {
     overflow: hidden;
   }
@@ -169,7 +170,7 @@ div [type="box"]:hover{
     top: 46px;
     right: -46px;
     border-radius: 6px;
-    background-color: rgb(8, 8, 8);
+    background-color: #eee;
     display: block;
     text-align: center;
     opacity: 0;
@@ -186,10 +187,10 @@ div [type="box"]:hover{
   .pricing-nav-list li a {
     font-size: 15px;
     padding: 4px;
-    color: #997777;
+    color: black;
   }
   .pricing-nav-list li a:hover {
-    color: rgb(243, 236, 236);
+    color: rgb(173, 99, 70);
     cursor: pointer;
   }
   .pricingMenu .pricing-nav-list {
@@ -200,7 +201,7 @@ div [type="box"]:hover{
     pointer-events: all;
   }
   .current {
-    background-color: #9977779c;
+    background-color: rgb(178, 216, 185);
   }
   .pricing-burger-icon {
     height: 41px;
@@ -242,40 +243,19 @@ div [type="box"]:hover{
   .pricing-information-container {
     width: 100%;
     display: grid;
-
     grid-gap: 20px;
-    grid-template-columns: repeat(2, 340px);
-    grid-template-rows: repeat(2, 232px);
-    /* margin-top: -7px; */
     margin-top: 24px;
-    /* grid-template-columns: repeat(2,400px); */
-    /* grid-template-rows: repeat(2,200px); */
-  }
-  .bronze-package-text,
-  .silver-package-text,
-  .platinum-package-text,
-  .basicHourly-package-text {
-    height: 210px;
-    width: 330px;
-    padding-top: 15px;
-    /* text-align: center; */
-    background-color: #e6e1c1;
-  }
-  .silver-package-text {
-    background-color: rgb(227 246 249);
-  }
-  .platinum-package-text {
-    background-color: rgb(202, 205, 216);
-  }
-  .basicHourly-package-text {
-    background-color: rgb(255 241 229);
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 300px);
+    justify-content: center;
+    align-items: center;
   }
   .price-heading {
     height: 50px;
-    font-size: 2.7vw;
+    font-size: 2.4vw;
   }
   .package-information {
-    font-size: 1.5vw;
+    font-size: 1.2vw;
   }
   .pricing-btn {
     width: 220px;
@@ -286,11 +266,11 @@ div [type="box"]:hover{
     text-align: center;
   }
   .pricing-footer {
-    width: 75%;
+    width: 100%;
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 530px) {
   .pricing-wrapper {
     overflow: hidden;
   }
@@ -303,14 +283,13 @@ div [type="box"]:hover{
     right: 2px;
     z-index: 1;
     display: block;
-    background-color: rgb(8, 8, 8);
+    /* background-color: rgb(8, 8, 8); */
     transition: 1000ms;
     transform: translateY(-260px);
     pointer-events: none;
   }
   .pricing-nav-list li {
     list-style: none;
-    /* font-size: 34px; */
     height: 33px;
     width: 100%;
   }
@@ -319,7 +298,6 @@ div [type="box"]:hover{
   }
   .pricingMenu .pricing-nav-list {
     transition: 1000ms;
-    /* background-color: lightgray; */
     transform: translateY(10px);
     pointer-events: all;
   }
@@ -331,36 +309,35 @@ div [type="box"]:hover{
   .pricing-information-container {
     width: 100%;
     display: inline;
-    margin: auto;
+    margin-top: 22px;
   }
   .bronze-package-text,
   .silver-package-text,
   .platinum-package-text,
   .basicHourly-package-text {
     margin-bottom: 22px;
-    height: 150px;
+    height: 180px;
     width: 100%;
     opacity: 0.9;
-    /* background: transparent; */
-    /* border: 2px solid black; */
     border-radius: 7px;
   }
   .price-heading {
     height: 50px;
-    font-size: 5.7vw;
+    font-size: 2.8vw;
     margin: -10px;
   }
   .package-information {
-    font-size: 2.7vw;
+    font-size: 2.2vw;
   }
   .pricing-btn {
-    width: 189px;
+    margin: 0px;
+    width: 125px;
     height: 30px;
-    font-size: 13px;
+    font-size: 10px;
     background-color: rgb(49, 49, 49);
   }
   .pricing-footer {
-    width: 100%;
-    font-size: 12px;
+    margin-top: 12px;
+    font-size: 9px;
   }
 }

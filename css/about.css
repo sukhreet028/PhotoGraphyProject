@@ -1,8 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Poppins;
 }
 .about-wrapper {
   height: 100%;
@@ -117,7 +116,7 @@
     right: -70px;
     z-index: 1;
     display: block;
-    background-color: rgb(8, 8, 8);
+    background-color: #eee;
     text-align: center;
     transition: 1000ms;
     transform: translateX(600px);
@@ -132,14 +131,15 @@
   .about-nav-list li a {
     font-size: 15px;
     padding: 4px;
-    color: #997777;
+    color: black;
   }
   .about-nav-list li a:hover {
-    color: rgb(243, 236, 236);
+    color: rgb(173, 99, 70);
     cursor: pointer;
   }
+
   .current {
-    background-color: #9977779c;
+    background-color: rgb(178, 216, 185);
   }
   .aboutMenu .about-nav-list {
     transition: 580ms;
@@ -214,8 +214,8 @@
   color: rgb(0, 0, 0);
   background-color: rgb(250, 250, 250);
   padding-top: 40px;
-  margin: 15px;
-  font-size: 20px;
+  /* margin: 15px; */
+  font-size: 16px;
 }
 
 .about-footer {
@@ -242,7 +242,7 @@
     right: 2px;
     z-index: 1;
     display: block;
-    background-color: rgb(8, 8, 8);
+    background-color: #eee;
     transition: 1000ms;
     transform: translateY(-260px);
     pointer-events: none;
@@ -253,9 +253,11 @@
     height: 33px;
     width: 100%;
   }
-  .about-nav-list li a {
+  /* .about-nav-list li a {
     font-size: 13px;
-  }
+    color: rgb(0, 0, 0);
+  } */
+
   .aboutMenu .about-nav-list {
     transition: 1000ms;
     /* background-color: lightgray; */
@@ -279,14 +281,14 @@
     background: none;
   }
   .au-paragraph {
-    font-size: 12px;
+    font-size: 10px;
     padding-top: 0px;
     background: none;
   }
 
   .about-footer {
     width: 100%;
-    font-size: 11px;
+    font-size: 9px;
     margin-top: 40px;
   }
 }

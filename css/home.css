@@ -3,7 +3,9 @@
   padding: 0px;
 }
 
-p,h1,h2 {
+p,
+h1,
+h2 {
   font-family: Poppins !important;
 }
 
@@ -74,6 +76,7 @@ body {
   text-decoration: none;
   color: rgb(101, 158, 101);
   text-transform: uppercase;
+  font-family: Poppins !important;
   padding: 25px;
 }
 .nav-list li a:hover {
@@ -128,6 +131,7 @@ body {
 
 .current {
   background-color: rgb(255, 255, 255);
+  /* background-color: rgb(178, 216, 185); */
   border-radius: 14px;
   padding: 4px 15px !important;
 }
@@ -180,6 +184,7 @@ body {
 .about-us-btn a,
 .contact-us-btn a {
   text-decoration: none;
+  font-family: Poppins !important;
   color: rgb(71, 151, 71);
 }
 @media (max-width: 620px) {
@@ -224,8 +229,7 @@ body {
   width: 100%;
   color: rgb(0, 0, 0);
   text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Poppins !important;
   font-size: 22px;
   /* margin: auto; */
   /* background-color: cornflowerblue; */
@@ -266,6 +270,7 @@ body {
   width: 80%;
   margin: auto;
   font-size: 30px;
+  font-family: Poppins !important;
 }
 .achievement-slider {
   background-color: rgb(255, 255, 255);
@@ -284,7 +289,6 @@ body {
   flex-direction: column;
   margin: auto;
 }
-
 .awards,
 .expertise,
 .our-projects {
@@ -296,15 +300,17 @@ body {
 .project-heading {
   height: 30px;
   /* background-color: burlywood; */
-  font-size: 30px;
+  font-size: 26px;
   margin: 23px 0px;
   text-transform: uppercase;
+  font-family: Poppins !important;
 }
 .award-name-description,
 .expertise-description,
 .project-description {
   height: 120px;
-  font-size: 20px;
+  font-size: 16px;
+  font-family: Poppins !important;
   /* background-color: pink; */
 }
 .locate-us {
@@ -320,6 +326,7 @@ body {
   height: 50px;
   font-size: 30px;
   text-align: center;
+  font-family: Poppins !important;
 }
 /* .locate-us-image {
   height: 300px;
@@ -331,8 +338,10 @@ body {
   width: 100%;
   margin-top: 10px;
 }
+
 .footer-copyright {
   text-align: center;
+  font-family: Poppins !important;
 }
 #footer-icon a {
   text-decoration: none;
@@ -384,8 +393,6 @@ body {
     height: 100px;
     color: rgb(0, 0, 0);
     text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 17px;
     margin: auto;
   }
@@ -396,34 +403,34 @@ body {
   .achievement-slider-heading {
     width: 100%;
     margin: auto;
-    font-size: 20px;
+    font-size: 14px;
   }
   .achievement-slider {
     width: 95%;
   }
   .award-expertise-projects-text-container {
-    height: 350px;
+    height: 420px;
     width: 100%;
   }
   .awards,
   .expertise,
   .our-projects {
-    height: 110px;
+    height: 150px;
   }
   .award-heading,
   .expertise-heading,
   .project-heading {
-    font-size: 20px;
+    font-size: 14px;
     margin: 3px 0px;
     text-transform: uppercase;
   }
   .award-name-description,
   .expertise-description,
   .project-description {
-    font-size: 15px;
+    font-size: 10px;
   }
   .locate-us {
-    /* height: 350px; */
+    height: 400px;
     width: 100%;
   }
   .locate-us-heading {
@@ -467,16 +474,13 @@ body {
     padding: 25px;
     font-size: 12px;
   }
-  /* .current {
-    background-color: rgb(255, 255, 255);
-    border-radius: 14px;
-    padding: 4px 15px !important;
-  } */
-  /* .homepage {
-    background-color: #e21e1e2e;
-    height: 100px;
-    width: 80%;
-  } */
+  .nav-list li a:hover {
+    color: rgb(173, 99, 70);
+    cursor: pointer;
+  }
+  .current {
+    background-color: rgb(178, 216, 185);
+  }
   .contact-us-btn-background {
     width: 310px;
     height: 90px;
@@ -542,6 +546,6 @@ body {
   }
   .footer-copyright {
     text-align: center;
-    font-size: 13px;
+    font-size: 10px;
   }
 }

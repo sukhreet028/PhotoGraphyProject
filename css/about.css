@@ -199,6 +199,8 @@
   width: 100%;
   background-color: #fff;
   opacity: 0.9;
+  box-sizing: border-box;
+  padding: 0px 1rem;
 }
 .about-imaage-text-conatiner {
   margin-top: 34px;

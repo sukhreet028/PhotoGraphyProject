@@ -77,6 +77,7 @@
   background-position: center;
   background-size: cover;
   position: relative;
+  border-radius: 8px;
   animation-name: contact-Img;
   animation-duration: 2s;
   animation-iteration-count: 1;
@@ -94,8 +95,9 @@
   width: 100%;
   background-color: rgb(54 54 54 / 65%);
   text-align: center;
-  font-size: 20px;
-  padding-top: 15px;
+  font-size: 17px;
+  border-radius: 8px;
+  padding-top: 12px;
   color: white;
   position: relative;
   animation-name: contact-address;
@@ -111,11 +113,14 @@
   }
 }
 #email-address a {
-  color: rgb(68, 99, 68);
+  /* color: rgb(68, 99, 68); */
+  color: white;
+  font-style: italic;
   text-decoration: none;
+  font-weight: 500;
 }
 #email-address a:hover {
-  color: white;
+  color: black;
 }
 .contact-form-container {
   width: 100%;
@@ -139,16 +144,9 @@
 .contact-form {
   width: 100%;
   height: 845px;
+  border-radius: 8px;
   background-color: rgb(54 54 54 / 65%);
-  /* position: absolute;
-  top: 6%;
-  left: 2%; */
 }
-/* @media (max-width: 1400px) {
-    .contact-form{
-    width: 100%;
-    }
-} */
 .contact-form h3 {
   color: white;
   text-transform: uppercase;
@@ -159,16 +157,14 @@
 
 .formContactUs {
   /* background-color: thistle; */
-  height: 700px;
+  /* height: 700px; */
   width: 100%;
-  /* position: relative;
-    top: 7%;
-    left:9%; */
+  margin-top: 2rem;
 }
 input {
   height: 29px;
   width: 85%;
-  margin: 19px 0px;
+  margin: 21px 0px;
   font-size: 15px;
   padding: 5px;
   border-radius: 2px;
@@ -179,8 +175,8 @@ input {
 }
 textarea {
   resize: vertical;
-  margin: 19px 0px;
-  font-size: 20px;
+  margin: 21px 0px;
+  font-size: 15px;
   color: black;
   width: 85%;
   height: 199px;
@@ -191,31 +187,24 @@ textarea {
   left: 50%;
   transform: translateX(-50%);
 }
-/* .contactForm-btn {
-    height: 40px; */
-/* background-color: black; */
-/* position: relative;
-    left: 0%;
-    top: -1%; */
-
 .contact-form button {
-  height: 40px;
-  width: 220px;
+  height: 34px;
+  width: 111px;
   color: white;
-  background-color: transparent;
-  border: 2px solid rgb(173, 216, 173);
-  font-size: 20px;
-  /* padding-bottom: 4px; */
-  text-transform: uppercase;
+  font-size: 14px;
+  background-color: black;
+  border-radius: 11px;
+  border: none;
   margin: 16px 0px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
 }
 .contact-footer {
-  height: 35px;
+  height: 70px;
   width: 100%;
-  margin: 0px auto;
+  /* margin: 0px auto; */
+  margin-bottom: 5rem !important;
   text-align: center;
   /* background-color: turquoise; */
   position: relative;
@@ -236,95 +225,6 @@ textarea {
   text-decoration: none;
   color: black;
 }
-/* @media (max-width: 1024px) {
-  .contact-wrapper {
-    overflow: hidden;
-  }
-  .contact-nav {
-    width: 100%;
-    position: relative;
-    top: 0px;
-  }
-  .contact-nav-list {
-    height: 163px;
-    width: 27%;
-    position: absolute;
-    border-radius: 6px;
-    top: 48px;
-    right: -67px;
-    z-index: 1;
-    display: block;
-    background-color: #eee;
-    text-align: center;
-    transition: 1000ms;
-    transform: translateX(600px);
-    pointer-events: none;
-  }
-  .contact-nav-list li {
-    list-style: none;
-    height: 33px;
-    width: 100%;
-  }
-  .contact-nav-list li a {
-    font-size: 15px;
-    padding: 4px;
-    color: rgb(0, 0, 0);
-  }
-  .contact-nav-list li a:hover {
-    color: rgb(173, 99, 70);
-    cursor: pointer;
-  }
-  .current {
-    background-color: rgb(173 216 173);
-  }
-  .contactMenu .contact-nav-list {
-    opacity: 1;
-    transition: 580ms;
-    /* background-color: lightgray; */
-/* transform: translateX(0px);
-    pointer-events: all;
-  }
-  .contact-burger-icon {
-    height: 41px;
-    width: 63px; */
-/* border: 2px solid black; */
-/* position: absolute;
-    top: 0px;
-    right: -80px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 10ms ease-in-out;
-  }
-  .line {
-    width: 35px;
-    height: 4px;
-    background-color: rgb(2, 2, 2); */
-/* margin:5px 2px; */
-/* transition: 50ms ease-in-out;
-  }
-  .cLine1 {
-    transform: translate(12px, 10px);
-  }
-  .cLine2 {
-    transform: translate(12px, 15px);
-  }
-  .cLine3 {
-    transform: translate(12px, 21px); */
-/* transform:translateY(4px) */
-/* }
-  .btnClassContact .cLine2 {
-    background-color: transparent;
-  }
-  .btnClassContact .cLine1 {
-    transform: rotate(-45deg) translate(-2px, 23px);
-  }
-  .btnClassContact .cLine3 {
-    transform: rotate(45deg) translate(18px, -4px);
-  }
-  .contact-form h3 {
-    margin-top: 12px;
-  }  
-}*/
 @media (max-width: 1000px) {
   .contact-burger-icon {
     height: 41px;
@@ -346,15 +246,16 @@ textarea {
     top: 0px;
   }
   .contact-nav-list {
-    height: 163px;
-    width: 27%;
+    height: 166px;
+    width: 53%;
     position: absolute;
     border-radius: 6px;
     top: 48px;
-    right: -67px;
+    right: -8%;
     z-index: 1;
     display: block;
     background-color: #eee;
+    box-shadow: 5px 5px 8px 0px grey;
     text-align: center;
     transition: 1000ms;
     transform: translateX(600px);
@@ -458,6 +359,9 @@ textarea {
   .contact-form h3 {
     margin-top: 20px;
   }
+  .contact-form button {
+    margin: 0px;
+  }
   .contact-footer {
     margin-top: 2rem;
   }
@@ -465,12 +369,13 @@ textarea {
 
 @media (max-width: 520px) {
   .contact-nav-list {
-    height: 160px;
+    height: 166px;
     width: 100%;
     position: absolute;
     border-radius: 6px;
     top: 44px;
     right: -8px;
+    box-shadow: 5px 5px 8px 0px grey;
     z-index: 1;
     display: block;
     background-color: #eee;
@@ -534,23 +439,10 @@ textarea {
     font-size: 14px;
     background-color: #b6bbbd80;
   }
-  .contact-form button {
-    height: 35px;
-    width: 111px;
-    color: white;
-    background-color: #171616;
-    border: none;
-    border-radius: 8px;
-    font-size: 12px;
-    text-transform: uppercase;
-    /* margin: 16px 0px; */
-    margin: 4px 0px;
-  }
   .contact-image-address-container {
     display: none;
   }
   .contact-footer {
-    width: 100%;
     height: auto;
     margin-top: 1rem;
     font-size: 9px;

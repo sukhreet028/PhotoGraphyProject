@@ -5,11 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
-      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Gallery</title>
     <link rel="stylesheet" href="../css/gallery.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -21,7 +28,6 @@
       crossorigin="anonymous"
     ></script>
   </head>
-
   <body>
     <div class="gallery-wrapper">
       <a id="moveImage"></a>
@@ -58,31 +64,51 @@
           <div class="main-gallery">
             <div id="event-images1"></div>
             <div id="gallery-quote">
-            <h1 id="gallery-heading">Gallery</h1>
-            <p id="gallery-para">
-              Memories of our experiences connect with one another and
-              they are the basis of who we are as individuals.
-              Memories of our experiences are called autobiographical
-              memories and they rely on a brain region called the
-              hippocampus.
-            <div class="gallery-tittle">
-              <div class="heading-text">Explore <span>other event shoot</span></div>
-              <div class="select-list">
-                <button type="button" onclick="showGalleryOptions()">
-                  Wedding Gallery
-                </button>
+              <h1 id="gallery-heading">Gallery</h1>
+              <p id="gallery-para">
+                Memories of our experiences connect with one another and they
+                are the basis of who we are as individuals. Memories of our
+                experiences are called autobiographical memories and they rely
+                on a brain region called the hippocampus.
+              </p>
+
+              <div class="gallery-tittle">
+                <div class="heading-text">
+                  Explore <span>other event shoot</span>
+                </div>
+                <div class="select-list">
+                  <button type="button">
+                    Our Galleries
+                  </button>
+                  <!-- <p class="text">Our Galleries</p> -->
+                  <i id="arrow" class="fas fa-sort-down" onclick="showGalleryOptions()"></i>
+                
                 <div class="gallery-dropdown" id="option-list">
                   <ul>
                     <li id="li-1">
-                      <a href="#" onclick="showGalleryImg('eventGal')">Event Gallery</a></li>
+                      <a href="#" onclick="showGalleryImg('eventGal')"
+                        >Event Gallery</a
+                      >
+                    </li>
+                    <li id="li-0">
+                      <a href="#" onclick="showGalleryImg('wedGal')"
+                        >Wedding Gallery</a
+                      >
+                    </li>
                     <li id="li-2">
-                      <a href="#" onclick="showGalleryImg('natureGal')">Nature Gallery</a>
+                      <a href="#" onclick="showGalleryImg('natureGal')"
+                        >Nature Gallery</a
+                      >
                     </li>
                     <li id="li-3">
-                      <a href="#" onclick="showGalleryImg('proGal')">Professional Gallery</a>
+                      <a href="#" onclick="showGalleryImg('proGal')"
+                        >Professional Gallery</a
+                      >
                     </li>
                     <li id="li-4">
-                      <a href="#" onclick="showGalleryImg('otherGal')">Others</a>
+                      <a href="#" onclick="showGalleryImg('otherGal')"
+                        >Others</a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -92,41 +118,15 @@
 
           <div id="event-images2"></div>
         </div>
-        <!-- <div class="gallery-tittle">
-            <div class="heading-text">headinghshghg </div>
-            <div class="select-list">select list</div>
-        </div> -->
-
         <div class="gallery-images-btn-footer-container">
-          <!-- <div class="gallery-tittle">
-                        <div class="heading-text">Explore other event shoot </div>
-                        <div class="select-list">
-                            <button type="button" onclick="showGalleryOptions()"> Occasion Gallery </button>
-                            <div class="gallery-dropdown" id="option-list">
-                                <ul>
-                                    <li id="li-1"><a href="#" onclick="showGalleryImg('eventGal')">Event Gallery</a></li>
-                                    <li id="li-2"><a href="#" onclick="showGalleryImg('natureGal')">Nature Gallery</a></li>
-                                    <li id="li-3"><a href="#" onclick="showGalleryImg('proGal')">Professional Gallery</a></li>
-                                    <li id="li-4"><a href="#" onclick="showGalleryImg('otherGal')">Others</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> -->
-          <div class="gallery-images">
-            <!-- <div onclick="showFullSIzeImage('event-images')" id="event-images3" class="imgStyle"></div>
-                        <div onclick="showFullSIzeImage('event-images')" id="event-images4" class="imgStyle"></div>
-                        <div onclick="showFullSIzeImage('event-images')" id="event-images5" class="imgStyle"></div>
-                        <div onclick="showFullSIzeImage('event-images')" id="event-images6" class="imgStyle"></div>
-                        <div onclick="showFullSIzeImage('event-images')" id="event-images7" class="imgStyle"></div>
-                        <div onclick="showFullSIzeImage('event-images')" id="event-images8" class="imgStyle"></div> -->
-          </div>
+          <div class="gallery-images"></div>
 
           <div class="gallery-button">
             <button
               type="button"
               class="gallery-btn"
               id="imgButton"
-              onclick="showMoreImg('hello')"
+              onclick="showMoreImg()"
             >
               LOADING MEMORIES...
             </button>
@@ -139,8 +139,8 @@
                 ><i class="fab fa-facebook"></i
               ></a>
               <a href="https://www.instagram.com/"
-                ><i class="fab fa-instagram"></i>
-              </a>
+                ><i class="fab fa-instagram"></i
+              ></a>
               <a href="https://www.twitter.com/"
                 ><i class="fab fa-twitter"></i
               ></a>

@@ -1,5 +1,5 @@
-const mainGallery = document.querySelector('.main-gallery');
-const gallery = document.querySelector('.gallery-images');
+const mainGallery = document.querySelector(".main-gallery");
+const gallery = document.querySelector(".gallery-images");
 let galleryToggle = false;
 let currentLargeImage;
 let previousImage;
@@ -9,14 +9,14 @@ let arrayImageNo = 8;
 const galleryList = document.querySelector('.gallery-nav');
 const galleryButton = document.querySelector('.gallery-burger-icon');
 var eventGallery = [
-  '../images/e0.jpeg',
-  '../images/e0.1.jpeg',
-  '../images/e1.jpeg',
-  '../images/e2.jpeg',
-  '../images/e3.jpeg',
-  '../images/e4.jpeg',
-  '../images/e5.jpeg',
-  '../images/e6.jpeg',
+  "../images/e0.jpeg",
+  "../images/e0.1.jpeg",
+  "../images/e1.jpeg",
+  "../images/e2.jpeg",
+  "../images/e3.jpeg",
+  "../images/e4.jpeg",
+  "../images/e5.jpeg",
+  "../images/e6.jpeg",
 ];
 var normalPics = [
   '../images/img0.jpeg',
@@ -55,24 +55,24 @@ var professionalGal = [
   '../images/img6.jpeg',
 ];
 var natureGal = [
-  '../images/n00.jpeg',
-  '../images/n0.1.jpeg',
-  '../images/n1.jpeg',
-  '../images/n2.jpeg',
-  '../images/n3.jpeg',
-  '../images/n4.jpeg',
-  '../images/n5.jpeg',
-  '../images/n6.jpeg',
+  "../images/n00.jpeg",
+  "../images/n0.1.jpeg",
+  "../images/n1.jpeg",
+  "../images/n2.jpeg",
+  "../images/n3.jpeg",
+  "../images/n4.jpeg",
+  "../images/n5.jpeg",
+  "../images/n6.jpeg",
 ];
 var otherGal = [
-  '../images/o0.1.jpeg',
-  '../images/o0.jpeg',
-  '../images/o1.jpeg',
-  '../images/o2.jpeg',
-  '../images/o3.jpeg',
-  '../images/o4.jpeg',
-  '../images/o5.jpeg',
-  '../images/o6.jpeg',
+  "../images/o0.1.jpeg",
+  "../images/o0.jpeg",
+  "../images/o1.jpeg",
+  "../images/o2.jpeg",
+  "../images/o3.jpeg",
+  "../images/o4.jpeg",
+  "../images/o5.jpeg",
+  "../images/o6.jpeg",
 ];
 let imageCurrentArray = normalPics;
 
@@ -97,7 +97,7 @@ const addImagesToGallery = () => {
       setTimeout(() => {
         document
           .getElementById(index)
-          .addEventListener('click', () => showFullSIzeImage(data, index));
+          .addEventListener("click", () => showFullSIzeImage(data, index));
       }, 1000);
       imageDiv.appendChild(imageComponent);
       gallery.appendChild(imageDiv);
@@ -105,21 +105,24 @@ const addImagesToGallery = () => {
   });
 };
 
-const selectList = document.getElementById('gallery');
+const selectList = document.getElementById("gallery");
 
 function showGalleryImg(galleryType) {
-  var mySecondList = document.getElementById('option-list');
+  var mySecondList = document.getElementById("option-list");
   mySecondList.style.display = null;
   galleryToggle = false;
 
-  if (galleryType === 'natureGal') {
+  if (galleryType === "natureGal") {
     showImages(natureGal);
-  } else if (galleryType === 'otherGal') {
+  } else if (galleryType === "otherGal") {
     showImages(otherGal);
-  } else if (galleryType === 'eventGal') {
+  } else if (galleryType === "eventGal") {
     showImages(eventGallery);
-  } else if (galleryType === 'proGal') {
+  } else if (galleryType === "proGal") {
     showImages(professionalGal);
+    //my added data
+  } else if (galleryType === "wedGal") {
+    showImages(normalPics);
   }
 }
 
@@ -163,11 +166,11 @@ function showMoreImg() {
 galleryButton.addEventListener('click', () => {
   gallerybtn = !gallerybtn;
   if (gallerybtn) {
-    galleryButton.classList.add('btnClassGallery');
-    galleryList.classList.add('galleryMenu');
+    galleryButton.classList.add("btnClassGallery");
+    galleryList.classList.add("galleryMenu");
   } else {
-    galleryButton.classList.remove('btnClassGallery');
-    galleryList.classList.remove('galleryMenu');
+    galleryButton.classList.remove("btnClassGallery");
+    galleryList.classList.remove("galleryMenu");
   }
 });
 
@@ -177,9 +180,9 @@ function myList() {
 }
 const showGalleryOptions = () => {
   galleryToggle = !galleryToggle;
-  var mySecondList = document.getElementById('option-list');
+  var mySecondList = document.getElementById("option-list");
   if (galleryToggle) {
-    mySecondList.style.display = 'block';
+    mySecondList.style.display = "block";
   } else {
     mySecondList.style.display = null;
   }
@@ -188,19 +191,19 @@ const showGalleryOptions = () => {
 const showFullSIzeImage = (data, id) => {
   currentLargeImage = id;
   previousImage = id;
-  document.getElementById('gallery-container').style.display = 'none';
-  const largeImg = document.getElementById('main-image');
-  const largeImgWrapper = document.getElementById('main-image-wrapper');
-  largeImg.setAttribute('src', data);
-  largeImgWrapper.style.display = 'flex';
+  document.getElementById("gallery-container").style.display = "none";
+  const largeImg = document.getElementById("main-image");
+  const largeImgWrapper = document.getElementById("main-image-wrapper");
+  largeImg.setAttribute("src", data);
+  largeImgWrapper.style.display = "flex";
 };
 
 const showGallery = () => {
-  const prevImage = document.getElementById('moveImage');
-  prevImage.setAttribute('href', '#D' + previousImage);
+  const prevImage = document.getElementById("moveImage");
+  prevImage.setAttribute("href", "#D" + previousImage);
   prevImage.click();
-  const largeImgWrapper = document.getElementById('main-image-wrapper');
-  document.getElementById('gallery-container').style.display = null;
+  const largeImgWrapper = document.getElementById("main-image-wrapper");
+  document.getElementById("gallery-container").style.display = null;
   largeImgWrapper.style.display = null;
 
   setTimeout(() => {
@@ -209,21 +212,21 @@ const showGallery = () => {
 };
 
 const leftMove = () => {
-  const largeImg = document.getElementById('main-image');
+  const largeImg = document.getElementById("main-image");
   if (currentLargeImage <= 2) {
-    largeImg.setAttribute('src', imageCurrentArray[currentLargeImage]);
+    largeImg.setAttribute("src", imageCurrentArray[currentLargeImage]);
   } else {
-    largeImg.setAttribute('src', imageCurrentArray[currentLargeImage - 1]);
+    largeImg.setAttribute("src", imageCurrentArray[currentLargeImage - 1]);
     currentLargeImage = currentLargeImage - 1;
   }
 };
 
 const rightMove = () => {
-  const largeImg = document.getElementById('main-image');
+  const largeImg = document.getElementById("main-image");
   if (currentLargeImage + 1 === imageCurrentArray.length) {
-    largeImg.setAttribute('src', imageCurrentArray[currentLargeImage]);
+    largeImg.setAttribute("src", imageCurrentArray[currentLargeImage]);
   } else {
-    largeImg.setAttribute('src', imageCurrentArray[currentLargeImage + 1]);
+    largeImg.setAttribute("src", imageCurrentArray[currentLargeImage + 1]);
     currentLargeImage = currentLargeImage + 1;
   }
 };

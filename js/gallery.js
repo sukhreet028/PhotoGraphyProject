@@ -1,8 +1,13 @@
 const mainGallery = document.querySelector('.main-gallery');
 const gallery = document.querySelector('.gallery-images');
 let galleryToggle = false;
-// var normalWed= ['../images/o2.jpeg'];
-// var normalFam =['../images/o3.jpeg']
+let currentLargeImage;
+let previousImage;
+let gallerybtn = false;
+let noOfImages = 8;
+let arrayImageNo = 8;
+const galleryList = document.querySelector('.gallery-nav');
+const galleryButton = document.querySelector('.gallery-burger-icon');
 var eventGallery = [
   '../images/e0.jpeg',
   '../images/e0.1.jpeg',
@@ -25,6 +30,10 @@ var normalPics = [
   '../images/n4.jpeg',
   '../images/n5.jpeg',
   '../images/p6.jpeg',
+  '../images/p3.jpeg',
+  '../images/p4.jpeg',
+  '../images/p5.jpeg',
+  '../images/p6.jpeg',
 ];
 var professionalGal = [
   '../images/p00.jpeg',
@@ -35,6 +44,15 @@ var professionalGal = [
   '../images/p4.jpeg',
   '../images/p5.jpeg',
   '../images/p6.jpeg',
+  '../images/img2.jpeg',
+  '../images/img3.jpeg',
+  '../images/img4.jpeg',
+  '../images/img5.jpeg',
+  '../images/img6.jpeg',
+  '../images/img3.jpeg',
+  '../images/img4.jpeg',
+  '../images/img5.jpeg',
+  '../images/img6.jpeg',
 ];
 var natureGal = [
   '../images/n00.jpeg',
@@ -56,26 +74,20 @@ var otherGal = [
   '../images/o5.jpeg',
   '../images/o6.jpeg',
 ];
+let imageCurrentArray = normalPics;
 
-let noOfImages = 8;
-let wholeCurrentArray;
-let arrayImageNo = 8;
-
-let imageCurrentArray = normalPics.slice(0, 8);
-wholeCurrentArray = normalPics;
-console.log(imageCurrentArray);
-// const imageComponent = document.createElement('img');
-// imageComponent.setAttribute("alt","image");
 window.onload = () => {
   addImagesToGallery();
+  if (arrayImageNo === imageCurrentArray.length) {
+    document.getElementById('imgButton').style.display = 'none';
+  }
 };
 const addImagesToGallery = () => {
   imageCurrentArray.map((data, index) => {
     if (index < 2) {
       var img1 = document.getElementById(`event-images${index + 1}`);
-      // console.log(img1);
       img1.style.backgroundImage = "url('" + data + "')";
-    } else {
+    } else if (index < arrayImageNo) {
       const imageComponent = document.createElement('img');
       const imageDiv = document.createElement('div');
       imageComponent.setAttribute('alt', 'image');
@@ -89,7 +101,6 @@ const addImagesToGallery = () => {
       }, 1000);
       imageDiv.appendChild(imageComponent);
       gallery.appendChild(imageDiv);
-      console.log(data);
     }
   });
 };
@@ -112,17 +123,25 @@ function showGalleryImg(galleryType) {
   }
 }
 
-const showImages = (galleryType) => {
-  console.log(imageCurrentArray);
+const showImages = (galleryType, wholeState) => {
   imageCurrentArray.map((data, index) => {
     if (index > 1 && index < arrayImageNo) {
       const imageDiv = document.getElementById('D' + index);
-      console.log('gallery'+gallery + '  '+ index);
       gallery.removeChild(imageDiv);
-      if (index + 1 === arrayImageNo) {
+    }
+    if (index + 1 === imageCurrentArray.length) {
+      if (!wholeState) {
         imageCurrentArray = galleryType;
-        wholeCurrentArray = galleryType;
-        addImagesToGallery();
+        arrayImageNo = 8;
+        noOfImages = 8;
+        if (arrayImageNo !== galleryType.length) {
+          document.getElementById('imgButton').style.display = null;
+        }
+      }
+      arrayImageNo = noOfImages;
+      addImagesToGallery();
+      if (arrayImageNo === imageCurrentArray.length) {
+        document.getElementById('imgButton').style.display = 'none';
       }
     }
   });
@@ -130,44 +149,16 @@ const showImages = (galleryType) => {
 
 function showMoreImg() {
   arrayImageNo = noOfImages;
-  console.log('clicked more function');
-  if (wholeCurrentArray.length > noOfImages) {
-    let moreImagesArray = imageCurrentArray;
-    console.log('clicked more function inside if ');
+  if (imageCurrentArray.length >= noOfImages) {
     noOfImages = noOfImages + 6;
-    if (noOfImages <= wholeCurrentArray.length) {
-      console.log('clicked more function inside if2 ');
-      const startIndex = noOfImages - 5;
-      const leftImages = wholeCurrentArray.splice(startIndex, noOfImages);
-      leftImages.map(data => {
-        moreImagesArray.push(data);
-      })
-      // addImagesToGallery();
+    if (noOfImages <= imageCurrentArray.length) {
+      showImages(imageCurrentArray, true);
     } else {
-      console.log('clicked more function inside else ');
-      const startIndex = noOfImages - 5;
-      const leftImages = wholeCurrentArray.splice(startIndex, wholeCurrentArray.length);
-      leftImages.map((data,index) => {
-        moreImagesArray.push(data);
-        if(index === leftImages.length - 1) {
-          showImages(moreImagesArray);
-          noOfImages = wholeCurrentArray.length;
-        }
-        
-      })
-      
-      // console.log(moreImagesArray);
-      // console.log(wholeCurrentArray.splice(7, wholeCurrentArray.length));
-      
+      noOfImages = imageCurrentArray.length;
+      showImages(imageCurrentArray, true);
     }
   }
 }
-
-let gallerybtn = false;
-const galleryList = document.querySelector('.gallery-nav');
-// const contactList=document.querySelector('.contact-nav');
-
-const galleryButton = document.querySelector('.gallery-burger-icon');
 
 galleryButton.addEventListener('click', () => {
   gallerybtn = !gallerybtn;
@@ -181,12 +172,10 @@ galleryButton.addEventListener('click', () => {
 });
 
 function myList() {
-  console.log('inside llll');
   var mySecondList = document.querySelector('.gallery-dropdown');
   mySecondList.classList.add('myNewList');
 }
 const showGalleryOptions = () => {
-  console.log('inside');
   galleryToggle = !galleryToggle;
   var mySecondList = document.getElementById('option-list');
   if (galleryToggle) {
@@ -195,8 +184,7 @@ const showGalleryOptions = () => {
     mySecondList.style.display = null;
   }
 };
-let currentLargeImage;
-let previousImage;
+
 const showFullSIzeImage = (data, id) => {
   currentLargeImage = id;
   previousImage = id;
@@ -239,13 +227,3 @@ const rightMove = () => {
     currentLargeImage = currentLargeImage + 1;
   }
 };
-
-function showList(index) {
-  var galleryList1 = document.querySelector('.gallery-dropdown');
-  console.log(galleryList1);
-  var galleryItems = galleryList1.querySelectorAll('li');
-  console.log(galleryItems);
-  var item2 = galleryItems.value;
-  console.log(item2);
-}
-showList();

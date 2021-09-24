@@ -2,7 +2,6 @@
   margin: 0px;
   padding: 0px;
 }
-
 p,
 h1,
 h2 {
@@ -92,7 +91,7 @@ body {
 }
 .burger-icon {
   height: 41px;
-  width: 63px;
+  width: 58px;
   /* border: 2px solid black; */
   position: absolute;
   top: 16px;
@@ -155,7 +154,8 @@ body {
   /* position: absolute; */
   width: 531px;
   height: 135px;
-  background-color: rgb(234 232 233 / 41%);
+  background-color: rgb(8 8 8 / 64%);
+  color: beige;
   border-radius: 8px;
   /* top: -24px;
   left: -41px; */
@@ -187,7 +187,7 @@ body {
   font-family: Poppins !important;
   color: rgb(71, 151, 71);
 }
-@media (max-width: 620px) {
+/* @media (max-width: 620px) {
   .burger-icon {
     position: absolute;
     top: 2%;
@@ -213,63 +213,52 @@ body {
     width: 220px;
     margin: 10px;
   }
-}
+} */
 
 .photographer-intro-container {
-  height: 850px;
-  width: 70%;
+  height: 830px;
+  width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   /* background-color: chocolate; */
   margin: auto;
 }
+.info-heading {
+  color: rgb(101 158 101);
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 700;
+  margin-top: 10px;
+}
 .introduction-text {
-  height: 80px;
+  /* height: 80px; */
   width: 100%;
   color: rgb(0, 0, 0);
-  text-align: center;
+  text-align: justify;
   font-family: Poppins !important;
-  font-size: 22px;
-  /* margin: auto; */
-  /* background-color: cornflowerblue; */
+  font-size: 17px;
 }
-.photographerImg {
-  height: 600px;
-  /* background-color:rgb(155, 6, 6); */
-}
+/* .photographerImg {
+  height: 700px;
+   background-color:rgb(155, 6, 6);  
+} */
 .photographerImg img {
-  height: 600px;
+  height: 630px;
   width: 100%;
-  border-right: 10px solid rgb(101, 158, 101);
-  border-top: 10px solid rgb(101, 158, 101);
+  box-shadow: 2px 3px 4px 2px;
+  object-fit: fill;
 }
-.locate-us {
-  height: 350px;
-  width: 70%;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: auto;
-}
-.locate-us-heading {
-  height: 50px;
-  font-size: 25px;
-  text-align: center;
-}
-
 .achievements-slider-container {
-  height: 580px;
-  /* background-color: blue; */
+  height: 650px;
   display: flex;
   flex-direction: column;
 }
 .achievement-slider-heading {
   height: 30px;
-  width: 80%;
+  width: 75%;
   margin: auto;
-  font-size: 30px;
+  font-size: 26px;
   font-family: Poppins !important;
 }
 .achievement-slider {
@@ -283,8 +272,7 @@ body {
 }
 .award-expertise-projects-text-container {
   height: 550px;
-  width: 80%;
-  /* background-color: chartreuse; */
+  width: 75%;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -293,13 +281,11 @@ body {
 .expertise,
 .our-projects {
   height: 183px;
-  /* border: 2px solid rgb(0, 0, 0); */
 }
 .award-heading,
 .expertise-heading,
 .project-heading {
   height: 30px;
-  /* background-color: burlywood; */
   font-size: 26px;
   margin: 23px 0px;
   text-transform: uppercase;
@@ -311,7 +297,6 @@ body {
   height: 120px;
   font-size: 16px;
   font-family: Poppins !important;
-  /* background-color: pink; */
 }
 .locate-us {
   height: 350px;
@@ -326,6 +311,7 @@ body {
   height: 50px;
   font-size: 30px;
   text-align: center;
+  margin-bottom: 20px;
   font-family: Poppins !important;
 }
 /* .locate-us-image {
@@ -336,7 +322,8 @@ body {
 .footer {
   height: 50px;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 4rem !important;
 }
 
 .footer-copyright {
@@ -388,12 +375,9 @@ body {
     left: -100vw;
   }
 }
-@media (max-width: 840px) {
+@media (max-width: 1024px) {
   .introduction-text {
-    height: 100px;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    font-size: 17px;
+    font-size: 14px;
     margin: auto;
   }
   .photographer-intro-container {
@@ -439,13 +423,13 @@ body {
     text-align: center;
   }
 }
-@media (max-width: 587px) {
+@media (max-width: 650px) {
   .burger-icon {
     height: 40px;
     width: 60px;
     position: absolute;
     top: 1%;
-    left: 87%;
+    right: 10px;
   }
   .home-nav-list {
     width: 70%;
@@ -461,6 +445,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    box-shadow: 5px 5px 8px 0px grey;
   }
   .nav-list li {
     list-style: none;
@@ -514,13 +499,18 @@ body {
     border-radius: 8px;
   }
   .photographer-intro-container {
-    height: 240px;
-    background-color: azure;
+    height: 150px;
+  }
+  .info-heading {
+    font-size: 20px;
+    margin-top: 10px;
+    color: black;
   }
   .introduction-text {
     color: rgb(142 73 73);
     text-align: center;
     font-size: 11px;
+    margin: 0px;
   }
   .photographerImg {
     display: none;
@@ -535,17 +525,15 @@ body {
   .award-heading,
   .expertise-heading,
   .project-heading {
-    font-size: 15px;
-    /* margin: 3px 0px;
-    text-transform: uppercase; */
+    font-size: 13px;
   }
   .award-name-description,
   .expertise-description,
   .project-description {
-    font-size: 10px;
+    font-size: 9px;
   }
   .footer-copyright {
     text-align: center;
-    font-size: 10px;
+    font-size: 9px;
   }
 }

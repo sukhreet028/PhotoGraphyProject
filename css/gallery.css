@@ -113,7 +113,13 @@ body {
   background-position: center;
   background-size: cover;
   border-radius: 6px;
-  box-shadow: 2px 2px 8px 0px;
+  /* box-shadow: 2px 2px 8px 0px; */
+  /* transition: 0.5s ease-in-out; */
+}
+#event-images1:hover {
+  transform: skewX(2deg);
+  transition: 1s;
+  cursor: pointer;
 }
 #gallery-quote {
   text-align: center;
@@ -133,7 +139,12 @@ body {
   background-position: center;
   background-size: cover;
   border-radius: 6px;
-  box-shadow: 2px 2px 8px 0px;
+  /* box-shadow: 2px 2px 8px 0px; */
+}
+#event-images2:hover {
+  transform: skewY(2deg);
+  transition: 1s;
+  cursor: pointer;
 }
 
 /* new changwe */
@@ -227,6 +238,7 @@ body {
   grid-column-gap: 2rem;
   justify-content: space-evenly;
   align-items: center;
+  transition: all 1s ease-in-out;
 }
 
 .gallery-images > div > img {
@@ -235,14 +247,17 @@ body {
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 2px 2px 8px 0px;
+  transition: 0.5s;
 }
+
 /* .gallery-images > div > img {
   transform: scale(1, 1);
-}
+}*/
 .gallery-images > div > img:hover {
-  transform: scale(1.06);
+  transform: skew(3deg, 3deg);
+  transition: 0.5s;
   cursor: pointer;
-} */
+}
 
 #event-images3,
 #event-images4,
@@ -283,6 +298,9 @@ body {
   width: 50vw;
   object-fit: contain;
 }
+/* #main-image {
+  border: 2px solid white;
+} */
 #closeButton {
   position: absolute;
   right: 2rem;
@@ -301,9 +319,10 @@ body {
 
 #leftButton {
   position: absolute;
-  left: 7rem;
-  top: 50%;
-  transform: translateX(-50%);
+  left: 4rem;
+  /* top: 50%; */
+  font-size: 80px;
+  /* transform: translateX(-50%); */
   color: #efeae585;
   background-color: transparent;
   border: none;
@@ -316,8 +335,9 @@ body {
 #rightButton {
   position: absolute;
   right: 5rem;
-  top: 50%;
-  transform: translateX(-50%);
+  /* top: 50%; */
+  font-size: 80px;
+  /* transform: translateX(-50%); */
   color: #efeae585;
   background-color: transparent;
   border: none;
@@ -342,6 +362,10 @@ body {
   background: #96dd96;
   border: none;
   border-radius: 10px;
+}
+.gallery-btn:hover {
+  transform: rotateX(35deg);
+  box-shadow: 5px 5px 8px 0px grey;
 }
 .gallery-footer {
   height: 70px;
@@ -515,6 +539,12 @@ body {
     position: relative;
     top: 9px;
   }
+
+  #leftButton,
+  #rightButton,
+  #closeButton {
+    font-size: 40px;
+  }
 }
 @media (max-width: 720px) {
   .gallery-nav-list {
@@ -622,6 +652,18 @@ body {
     margin-top: 14px;
     font-size: 10px;
   }
+  #leftButton {
+    left: 2rem;
+    font-size: 25px;
+  }
+  #rightButton {
+    right: 2rem;
+    font-size: 25px;
+  }
+  #closeButton {
+    font-size: 25px;
+  }
+
   .gallery-footer {
     font-size: 9px;
     margin-top: 33px;

@@ -76,6 +76,10 @@ body {
   justify-content: center;
   border-radius: 7px;
 }
+.activeClass {
+  background-color: rgb(150, 95, 95);
+  color: white !important;
+}
 .gallery-dropdown ul li a:hover {
   background-color: rgb(219, 178, 178);
   color: white;
@@ -148,7 +152,7 @@ body {
   color: rgb(63, 57, 57);
   padding-left: 5px;
 }
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .heading-text {
     font-weight: bold;
     margin-left: 2rem;
@@ -156,6 +160,9 @@ body {
   .heading-text span {
     display: none;
   }
+}
+
+@media (max-width: 1024px) {
   .gallery-tittle {
     box-shadow: 3px 2px 3px 0px #1dc21d40 !important;
   }
@@ -163,7 +170,6 @@ body {
 
 .select-list {
   position: relative;
-  /* background-color: #fff5f3b8; */
 }
 /* .btn-arrow-icon {
   /* background-color: pink; */
@@ -175,10 +181,9 @@ body {
 .select-list button {
   /* position: relative; */
   text-align: start;
-  padding: 8px;
-  width: 138px;
-  background: transparent;
-  /* background-color: #fff5f3b8; */
+  padding: 8px 16px;
+  width: 250px;
+  background-color: #fff5f3b8;
   border: none;
   border-radius: 6px;
   font-size: 15px;
@@ -189,9 +194,12 @@ body {
   font-size: 19px;
 }*/
 #arrow {
-  color: black;
-  font-size: 40px;
+  color: rgb(99, 96, 96);
+  font-size: 18px;
   text-align: end;
+  position: absolute;
+  right: 10px;
+  top: 6px;
 }
 
 #gallery {

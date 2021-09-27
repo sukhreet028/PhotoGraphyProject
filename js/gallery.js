@@ -6,6 +6,7 @@ let previousImage;
 let gallerybtn = false;
 let noOfImages = 8;
 let arrayImageNo = 8;
+let activeClassId = "a-0";
 const galleryList = document.querySelector('.gallery-nav');
 const galleryButton = document.querySelector('.gallery-burger-icon');
 var eventGallery = [
@@ -81,6 +82,8 @@ window.onload = () => {
   if (arrayImageNo === imageCurrentArray.length) {
     document.getElementById('imgButton').style.display = 'none';
   }
+
+  document.getElementById(activeClassId).classList.add('activeClass');
 };
 const addImagesToGallery = () => {
   imageCurrentArray.map((data, index) => {
@@ -107,21 +110,23 @@ const addImagesToGallery = () => {
 
 const selectList = document.getElementById("gallery");
 
-function showGalleryImg(galleryType) {
+function showGalleryImg(galleryType,id) {
   var mySecondList = document.getElementById("option-list");
   mySecondList.style.display = null;
   galleryToggle = false;
-
-  if (galleryType === "natureGal") {
+  document.getElementById('select-button').innerHTML = galleryType;
+  document.getElementById(activeClassId).classList.remove('activeClass');
+  document.getElementById(id).classList.add('activeClass');
+  activeClassId = id;
+  if (galleryType === "Nature Gallery") {
     showImages(natureGal);
-  } else if (galleryType === "otherGal") {
+  } else if (galleryType === "Others") {
     showImages(otherGal);
-  } else if (galleryType === "eventGal") {
+  } else if (galleryType === "Event Gallery") {
     showImages(eventGallery);
-  } else if (galleryType === "proGal") {
+  } else if (galleryType === "Professional Gallery") {
     showImages(professionalGal);
-    //my added data
-  } else if (galleryType === "wedGal") {
+  } else if (galleryType === "Wedding Gallery") {
     showImages(normalPics);
   }
 }

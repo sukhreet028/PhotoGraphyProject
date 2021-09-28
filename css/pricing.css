@@ -149,7 +149,8 @@ div [type="box"]:hover{
 .pricing-footer {
   width: 100%;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 30px;
+  margin-bottom: 7rem !important;
   /* height: 60px;
   width: 63%;
   margin: 40px 0px 10px auto; */
@@ -355,7 +356,6 @@ div [type="box"]:hover{
     background-color: rgb(49, 49, 49);
   }
   .pricing-footer {
-    margin-top: 12px;
     font-size: 9px;
   }
 }

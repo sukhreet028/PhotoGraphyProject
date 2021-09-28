@@ -595,6 +595,7 @@ body {
   }
   .select-list button {
     width: 100%;
+    font-size: 12px;
   }
   #gallery-quote {
     text-align: center;
@@ -647,6 +648,7 @@ body {
   }
   .gallery-dropdown ul li a {
     width: 100%;
+    font-size: 14px;
   }
   .gallery-images-btn-footer-container {
     display: block;

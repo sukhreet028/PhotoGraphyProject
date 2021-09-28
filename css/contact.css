@@ -227,7 +227,8 @@ textarea {
   color: black;
 }
 .contact-footer-copyright {
-  margin-top: 2rem !important;
+  margin-top: 35px;
+  margin-bottom: 7rem !important;
 }
 
 @media (max-width: 1024px) {

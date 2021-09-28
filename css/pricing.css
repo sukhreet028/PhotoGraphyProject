@@ -45,6 +45,11 @@
   padding: 4px 14px;
 }
 
+.choose-heading {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .pricing-information-container {
   display: grid;
   grid-template-columns: repeat(2, 450px);
@@ -313,6 +318,11 @@ div [type="box"]:hover{
     top: 0px;
     right: -45px;
   }
+
+  .choose-heading {
+    font-size: 18px;
+  }
+
   .pricing-information-container {
     width: 100%;
     display: inline;

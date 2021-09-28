@@ -19,7 +19,9 @@ function slider() {
   const image2 = document.getElementById("homeImage2");
   if (i === 0 && sliderState) {
     image1.setAttribute("src", imgArray[i]);
+    image2.style.display = "none";
   } else {
+    image2.style.display = null;
     sliderState = false;
     if (i % 2 === 0) {
       image1.classList.remove("goOut");

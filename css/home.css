@@ -95,7 +95,7 @@ body {
   /* border: 2px solid black; */
   position: absolute;
   top: 16px;
-  right: 10px;
+  right: 19px;
   background-color: lightgrey;
   border-radius: 5px;
   cursor: pointer;
@@ -216,13 +216,12 @@ body {
 } */
 
 .photographer-intro-container {
-  height: 830px;
   width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   /* background-color: chocolate; */
-  margin: auto;
+  margin: 1rem auto;
 }
 .info-heading {
   color: rgb(101 158 101);
@@ -238,13 +237,13 @@ body {
   text-align: justify;
   font-family: Poppins !important;
   font-size: 17px;
+  margin: 1rem 0px;
 }
 /* .photographerImg {
   height: 700px;
    background-color:rgb(155, 6, 6);  
 } */
 .photographerImg img {
-  height: 630px;
   width: 100%;
   box-shadow: 2px 3px 4px 2px;
   object-fit: fill;
@@ -269,6 +268,7 @@ body {
 .awardImg {
   width: 100%;
   height: 490px;
+  object-fit: contain;
 }
 .award-expertise-projects-text-container {
   height: 550px;
@@ -378,11 +378,10 @@ body {
 @media (max-width: 1024px) {
   .introduction-text {
     font-size: 14px;
-    margin: auto;
+    margin: 1rem auto;
   }
   .photographer-intro-container {
     width: 100%;
-    height: 750px;
   }
   .achievement-slider-heading {
     width: 100%;
@@ -535,5 +534,18 @@ body {
   .footer-copyright {
     text-align: center;
     font-size: 9px;
+  }
+}
+
+@media(max-width: 370px) {
+  .homepage {
+    left: 2vw;
+  }
+
+  .contact-us-btn-background {
+    width: 96vw;
+  }
+  .contact-us-btn-background h2 {
+    font-size: 12px;
   }
 }

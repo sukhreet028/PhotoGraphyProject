@@ -108,19 +108,14 @@ body {
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 8%;
 }
+
 #event-images1 {
   grid-row: 1 / span 2;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
-  /* box-shadow: 2px 2px 8px 0px; */
-  /* transition: 0.5s ease-in-out; */
 }
-#event-images1:hover {
-  transform: skewX(2deg);
-  transition: 1s;
-  cursor: pointer;
-}
+
 #gallery-quote {
   text-align: center;
   margin-top: 60px;
@@ -129,25 +124,20 @@ body {
   font-size: 35px;
   color: rgb(101, 158, 101);
 }
+
 #gallery-para {
   font-size: 18px;
   color: black;
   margin: 35px 0px;
   text-align: justify;
 }
+
 #event-images2 {
   background-position: center;
   background-size: cover;
   border-radius: 6px;
-  /* box-shadow: 2px 2px 8px 0px; */
-}
-#event-images2:hover {
-  transform: skewY(2deg);
-  transition: 1s;
-  cursor: pointer;
 }
 
-/* new changwe */
 .gallery-tittle {
   height: 60px;
   border-radius: 10px;
@@ -238,7 +228,8 @@ body {
   grid-column-gap: 2rem;
   justify-content: space-evenly;
   align-items: center;
-  transition: all 1s ease-in-out;
+  /* transition: all 1s ease-in-out; */
+  transition: all 0.5s ease-in-out;
 }
 
 .gallery-images > div > img {
@@ -250,13 +241,10 @@ body {
   transition: 0.5s;
 }
 
-/* .gallery-images > div > img {
-  transform: scale(1, 1);
-}*/
 .gallery-images > div > img:hover {
-  transform: skew(3deg, 3deg);
-  transition: 0.5s;
-  cursor: pointer;
+  transition: 1s;
+  transform: scale(1.1);
+  box-shadow: 0px 1px 4px 5px rgb(70, 66, 66);
 }
 
 #event-images3,
@@ -295,8 +283,16 @@ body {
 
 .large-image-wrapper img {
   height: 80vh;
-  width: 50vw;
+  width: 80vw;
   object-fit: contain;
+}
+
+@media (max-width: 810px) {
+  .large-image-wrapper img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: contain;
+  }
 }
 /* #main-image {
   border: 2px solid white;
@@ -364,7 +360,6 @@ body {
   border-radius: 10px;
 }
 .gallery-btn:hover {
-  transform: rotateX(35deg);
   box-shadow: 5px 5px 8px 0px grey;
 }
 .gallery-footer {
@@ -541,9 +536,23 @@ body {
   }
 
   #leftButton,
-  #rightButton,
+  #rightButton {
+    height: 60px;
+    width: 60px;
+    font-size: 40px;
+    background-color: green;
+    border-radius: 50%;
+  }
   #closeButton {
     font-size: 40px;
+  }
+  .right-icon {
+    margin-left: 3px;
+    margin-top: 7px;
+  }
+  .left-icon {
+    margin-right: 3px;
+    margin-top: 7px;
   }
 }
 @media (max-width: 720px) {
@@ -653,12 +662,24 @@ body {
     font-size: 10px;
   }
   #leftButton {
-    left: 2rem;
+    left: 0.5rem;
     font-size: 25px;
+    width: 40px;
+    height: 40px;
   }
   #rightButton {
-    right: 2rem;
+    right: 0.5rem; 
     font-size: 25px;
+    width: 40px;
+    height: 40px;
+  }
+  .right-icon {
+    margin-left: 3px;
+    margin-top: 7px;
+  }
+  .left-icon {
+    margin-right: 3px;
+    margin-top: 7px;
   }
   #closeButton {
     font-size: 25px;

@@ -1,0 +1,26 @@
+.main-nav {
+  width: 100%;
+}
+.main-nav-list {
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  font-family: Poppins !important;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main-nav-list li {
+  list-style: none;
+  font-size: 20px;
+}
+.main-nav-list a {
+  text-decoration: none;
+  color: rgb(101, 158, 101);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+.main-nav-list li a:hover {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}

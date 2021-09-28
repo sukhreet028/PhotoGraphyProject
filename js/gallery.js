@@ -7,8 +7,8 @@ let gallerybtn = false;
 let noOfImages = 8;
 let arrayImageNo = 8;
 let activeClassId = "a-0";
-const galleryList = document.querySelector('.gallery-nav');
-const galleryButton = document.querySelector('.gallery-burger-icon');
+const galleryList = document.querySelector(".gallery-nav");
+const galleryButton = document.querySelector(".gallery-burger-icon");
 var eventGallery = [
   "../images/e0.jpeg",
   "../images/e0.1.jpeg",
@@ -32,20 +32,16 @@ var eventGallery = [
   "../images/e20.jpeg",
 ];
 var normalPics = [
-  "../images/img0.jpeg",
-  "../images/img0.1.jpeg",
-  "../images/img1.jpeg",
-  "../images/img2.jpeg",
-  "../images/img3.jpeg",
-  "../images/img4.jpeg",
-  "../images/img5.jpeg",
-  "../images/img6.jpeg",
-  "../images/n4.jpeg",
-  "../images/n5.jpeg",
-  "../images/p6.jpeg",
-  "../images/w9.jpeg",
-  "../images/w10.jpeg",
-  "../images/w11.jpeg",
+  "../images/w0.jpeg",
+  "../images/w0.1.jpeg",
+  "../images/w1.jpeg",
+  "../images/w2.jpeg",
+  "../images/w3.jpeg",
+  "../images/w4.jpeg",
+  "../images/w5.jpeg",
+  "../images/w6.jpeg",
+  "../images/w9.webp",
+  "../images/w11.png",
   "../images/w12.jpeg",
   "../images/w13.jpeg",
   "../images/w14.jpeg",
@@ -57,14 +53,14 @@ var normalPics = [
   "../images/w20.jpeg",
 ];
 var professionalGal = [
-  "../images/p00.jpeg",
-  "../images/p0.jpeg",
   "../images/p1.jpeg",
   "../images/p2.jpeg",
   "../images/p3.jpeg",
   "../images/p4.jpeg",
   "../images/p5.jpeg",
   "../images/p6.jpeg",
+  "../images/p07.jpeg",
+  "../images/p08.jpeg",
   "../images/p9.jpeg",
   "../images/p10.jpeg",
   "../images/p11.jpeg",
@@ -79,8 +75,6 @@ var professionalGal = [
   "../images/p20.jpeg",
 ];
 var natureGal = [
-  "../images/n00.jpeg",
-  "../images/n0.1.jpeg",
   "../images/n1.jpeg",
   "../images/n2.jpeg",
   "../images/n3.jpeg",
@@ -90,7 +84,7 @@ var natureGal = [
   "../images/n7.jpeg",
   "../images/n8.jpeg",
   "../images/n9.jpeg",
-  "../images/n10.jpeg",
+  "../images/n10.png",
   "../images/n11.jpeg",
   "../images/n12.jpeg",
   "../images/n13.jpeg",
@@ -103,14 +97,14 @@ var natureGal = [
   "../images/n20.jpeg",
 ];
 var otherGal = [
-  "../images/o0.1.jpeg",
-  "../images/o0.jpeg",
   "../images/o1.jpeg",
   "../images/o2.jpeg",
   "../images/o3.jpeg",
   "../images/o4.jpeg",
   "../images/o5.jpeg",
   "../images/o6.jpeg",
+  "../images/o7.jpeg",
+  "../images/o8.jpeg",
   "../images/o9.jpeg",
   "../images/o10.jpeg",
   "../images/o11.jpeg",
@@ -121,7 +115,7 @@ var otherGal = [
   "../images/o16.jpeg",
   "../images/o17.jpeg",
   "../images/o18.jpeg",
-  "../images/o19.jpeg",
+  "../images/o19.jpg",
   "../images/o20.jpeg",
 ];
 let imageCurrentArray = normalPics;
@@ -129,10 +123,10 @@ let imageCurrentArray = normalPics;
 window.onload = () => {
   addImagesToGallery();
   if (arrayImageNo === imageCurrentArray.length) {
-    document.getElementById('imgButton').style.display = 'none';
+    document.getElementById("imgButton").style.display = "none";
   }
 
-  document.getElementById(activeClassId).classList.add('activeClass');
+  document.getElementById(activeClassId).classList.add("activeClass");
 };
 const addImagesToGallery = () => {
   imageCurrentArray.map((data, index) => {
@@ -140,12 +134,12 @@ const addImagesToGallery = () => {
       var img1 = document.getElementById(`event-images${index + 1}`);
       img1.style.backgroundImage = "url('" + data + "')";
     } else if (index < arrayImageNo) {
-      const imageComponent = document.createElement('img');
-      const imageDiv = document.createElement('div');
-      imageComponent.setAttribute('alt', 'image');
-      imageComponent.setAttribute('id', index);
-      imageComponent.setAttribute('src', data);
-      imageDiv.setAttribute('id', 'D' + index);
+      const imageComponent = document.createElement("img");
+      const imageDiv = document.createElement("div");
+      imageComponent.setAttribute("alt", "image");
+      imageComponent.setAttribute("id", index);
+      imageComponent.setAttribute("src", data);
+      imageDiv.setAttribute("id", "D" + index);
       setTimeout(() => {
         document
           .getElementById(index)
@@ -159,13 +153,13 @@ const addImagesToGallery = () => {
 
 const selectList = document.getElementById("gallery");
 
-function showGalleryImg(galleryType,id) {
+function showGalleryImg(galleryType, id) {
   var mySecondList = document.getElementById("option-list");
   mySecondList.style.display = null;
   galleryToggle = false;
-  document.getElementById('select-button').innerHTML = galleryType;
-  document.getElementById(activeClassId).classList.remove('activeClass');
-  document.getElementById(id).classList.add('activeClass');
+  document.getElementById("select-button").innerHTML = galleryType;
+  document.getElementById(activeClassId).classList.remove("activeClass");
+  document.getElementById(id).classList.add("activeClass");
   activeClassId = id;
   if (galleryType === "Nature Gallery") {
     showImages(natureGal);
@@ -183,7 +177,7 @@ function showGalleryImg(galleryType,id) {
 const showImages = (galleryType, wholeState) => {
   imageCurrentArray.map((data, index) => {
     if (index > 1 && index < arrayImageNo) {
-      const imageDiv = document.getElementById('D' + index);
+      const imageDiv = document.getElementById("D" + index);
       gallery.removeChild(imageDiv);
     }
     if (index + 1 === imageCurrentArray.length) {
@@ -192,13 +186,13 @@ const showImages = (galleryType, wholeState) => {
         arrayImageNo = 8;
         noOfImages = 8;
         if (arrayImageNo !== galleryType.length) {
-          document.getElementById('imgButton').style.display = null;
+          document.getElementById("imgButton").style.display = null;
         }
       }
       arrayImageNo = noOfImages;
       addImagesToGallery();
       if (arrayImageNo === imageCurrentArray.length) {
-        document.getElementById('imgButton').style.display = 'none';
+        document.getElementById("imgButton").style.display = "none";
       }
     }
   });
@@ -217,7 +211,7 @@ function showMoreImg() {
   }
 }
 
-galleryButton.addEventListener('click', () => {
+galleryButton.addEventListener("click", () => {
   gallerybtn = !gallerybtn;
   if (gallerybtn) {
     galleryButton.classList.add("btnClassGallery");
@@ -229,8 +223,8 @@ galleryButton.addEventListener('click', () => {
 });
 
 function myList() {
-  var mySecondList = document.querySelector('.gallery-dropdown');
-  mySecondList.classList.add('myNewList');
+  var mySecondList = document.querySelector(".gallery-dropdown");
+  mySecondList.classList.add("myNewList");
 }
 const showGalleryOptions = () => {
   galleryToggle = !galleryToggle;

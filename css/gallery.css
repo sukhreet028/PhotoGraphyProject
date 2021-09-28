@@ -493,7 +493,7 @@ body {
     margin-top: 0px;
   }
   #gallery-heading {
-    font-size: 30px;
+    font-size: 25px;
     color: rgb(101, 158, 101);
     padding: 0px;
   }
@@ -601,9 +601,12 @@ body {
     margin-top: 50px;
   }
   #gallery-heading {
-    font-size: 30px;
+    font-size: 20px;
     color: rgb(101, 158, 101);
     padding: 0px;
+  }
+  .heading-text {
+    font-size: 12px;
   }
   #gallery-para {
     font-size: 9px;

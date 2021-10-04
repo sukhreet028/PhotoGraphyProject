@@ -9,10 +9,10 @@ var imgArray = [
 ];
 var j = 0;
 var imgArray1 = [
-  "../images/a1.jpeg",
-  "../images/a3.jpeg",
+  // "../images/a3.jpeg",
+  "../images/a4.jpeg",
+  "../images/a5.jpeg",
   "../images/a9.jpeg",
-  "../images/a0.png",
 ];
 function slider() {
   const image1 = document.getElementById("homeImage");

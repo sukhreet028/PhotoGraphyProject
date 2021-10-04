@@ -185,7 +185,6 @@ body {
   .burger-icon {
     position: absolute;
     top: 2%;
-    left: 90%;
   }
   .contact-us-btn-background {
     width: 430px;
@@ -239,7 +238,7 @@ body {
 } */
 .photographerImg img {
   width: 100%;
-  box-shadow: 2px 3px 4px 2px;
+  box-shadow: 0px 0px 15px -5px grey;
   object-fit: fill;
 }
 .achievements-slider-container {

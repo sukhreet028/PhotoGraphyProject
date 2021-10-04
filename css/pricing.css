@@ -62,10 +62,10 @@
    top: 22%; */
   /* transition: all 0.5s ease-in-out; */
 }
-div [type="box"] {
+div [type='box'] {
   transition: all 0.5s ease-in-out;
 }
-div [type="box"]:hover {
+div [type='box']:hover {
   /* opacity: 0.7; */
   transition: 1s;
   transform: scale(1.1);
@@ -103,6 +103,14 @@ div [type="box"]:hover {
 }
 .package-information {
   font-size: 1vw;
+}
+@media (min-width: 1500px) {
+  .package-information {
+    font-size: 14px;
+  }
+  .price-heading {
+    font-size: 30px;
+  }
 }
 .booking-button {
   margin: auto;

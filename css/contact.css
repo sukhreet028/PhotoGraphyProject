@@ -457,3 +457,9 @@ textarea {
     font-size: 9px;
   }
 }
+
+@media(min-height: 980px) {
+  ::-webkit-scrollbar {
+    display: none !important;
+  }
+}

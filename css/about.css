@@ -284,3 +284,16 @@
     margin-top: 40px;
   }
 }
+
+@media(min-height: 980px) {
+  .about-image-text-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .about-image-text-container::-webkit-scrollbar {
+    display: none !important;
+  }
+  ::-webkit-scrollbar {
+    display: none !important;
+  }
+}

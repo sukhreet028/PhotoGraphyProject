@@ -402,7 +402,7 @@ textarea {
     background-color: #b6bbbd80;
   }
   #eventDate {
-    width: 100% !important;
+    width: 80vw !important;
   }
   textarea {
     height: 110px;

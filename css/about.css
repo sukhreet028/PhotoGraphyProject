@@ -97,10 +97,6 @@
   }
 }
 
-/* .showList {
-  display: block !important;
-} */
-
 @media (max-width: 1024px) {
   .about-nav {
     width: 100%;
@@ -151,7 +147,6 @@
   .about-burger-icon {
     height: 41px;
     width: 63px;
-    /* border: 2px solid black; */
     position: absolute;
     top: 10px;
     right: -12%;
@@ -163,7 +158,6 @@
     width: 35px;
     height: 4px;
     background-color: rgb(2, 2, 2);
-    /* margin:5px 2px; */
     transition: 50ms ease-in-out;
   }
   .aLine1 {
@@ -174,7 +168,6 @@
   }
   .aLine3 {
     transform: translate(12px, 21px);
-    /* transform:translateY(4px) */
   }
   .btnClassAbout .aLine2 {
     background-color: transparent;
@@ -237,13 +230,8 @@
 @media (max-width: 550px) {
   .about-nav-list {
     width: 100%;
-    /* position: absolute;
-    border-radius: 6px;*/
     top: 44px;
     right: -4%;
-    /* z-index: 1;
-    display: block;
-    background-color: #eee;*/
     transition: 1000ms;
     transform: translateY(-260px);
     pointer-events: none;

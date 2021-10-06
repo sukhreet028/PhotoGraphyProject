@@ -40,7 +40,10 @@ var normalPics = [
   "../images/w4.jpeg",
   "../images/w5.jpeg",
   "../images/w6.jpeg",
-  "../images/w9.webp",
+  "../images/w7.jpeg",
+  "../images/w8.jpeg",
+  "../images/w9.jpeg",
+  "../images/w10.jpeg",
   "../images/w11.png",
   "../images/w12.jpeg",
   "../images/w13.jpeg",
@@ -70,9 +73,6 @@ var professionalGal = [
   "../images/p15.jpeg",
   "../images/p16.jpeg",
   "../images/p17.jpeg",
-  "../images/p18.jpeg",
-  "../images/p19.jpeg",
-  "../images/p20.jpeg",
 ];
 var natureGal = [
   "../images/n1.jpeg",

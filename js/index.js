@@ -15,15 +15,23 @@ var imgArray = [
   '../images/hp7.jpeg',
 ];
 // logic to change the images on mobile and ipad 
-// if (deviceWidth < 576) {
-//   imgArray = [
-
-//   ]
-// } else if(deviceWidth < 900) {
-//   imgArray = [
-
-//   ]
-// }
+if(deviceWidth < 576) {
+ imgArray = [
+  '../images/phnpic1.jpeg',
+ '../images/phnpic2.jpeg',
+ '../images/phnpic3.jpeg',
+ '../images/phnpic4.jpeg',
+ '../images/phnpic5.jpeg'];
+ console.log('array2');
+} else if(deviceWidth < 900) {
+  imgArray = [
+    '../images/ipadpic1.jpeg',
+  '../images/ipadpic2.jpeg',
+  '../images/ipadpic3.jpeg',
+  '../images/ipadpic4.jpeg',
+];
+console.log('array3');
+};
 var j = 0;
 var imgArray1 = [
   // "../images/a3.jpeg",

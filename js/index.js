@@ -2,8 +2,13 @@ var i = 0;
 let deviceWidth = window.innerWidth;
 window.onresize = () => {
   deviceWidth = window.innerWidth;
-  console.log('inside func ' + deviceWidth);
+  changeSliderImages();
 };
+
+window.onload = () => {
+  changeSliderImages();
+  bothSlider();
+}
 
 console.log('outside func ' + deviceWidth);
 var sliderState = true;
@@ -13,25 +18,10 @@ var imgArray = [
   '../images/hp11.jpeg',
   '../images/hp9.jpeg',
   '../images/hp7.jpeg',
-];
-// logic to change the images on mobile and ipad 
-if(deviceWidth < 576) {
- imgArray = [
-  '../images/phnpic1.jpeg',
- '../images/phnpic2.jpeg',
- '../images/phnpic3.jpeg',
- '../images/phnpic4.jpeg',
- '../images/phnpic5.jpeg'];
- console.log('array2');
-} else if(deviceWidth < 900) {
-  imgArray = [
-    '../images/ipadpic1.jpeg',
-  '../images/ipadpic2.jpeg',
-  '../images/ipadpic3.jpeg',
   '../images/ipadpic4.jpeg',
 ];
-console.log('array3');
-};
+// logic to change the images on mobile and ipad
+
 var j = 0;
 var imgArray1 = [
   // "../images/a3.jpeg",
@@ -39,16 +29,37 @@ var imgArray1 = [
   '../images/a5.jpeg',
   '../images/a9.jpeg',
 ];
+const changeSliderImages = () => {
+  if (deviceWidth < 576) {
+    imgArray = [
+      '../images/phnpic1.jpeg',
+      '../images/phnpic2.jpeg',
+      '../images/phnpic3.jpeg',
+      '../images/phnpic4.jpeg',
+      '../images/phnpic5.jpeg',
+    ];
+  } else if (deviceWidth < 900) {
+    imgArray = [
+      '../images/ipadpic1.jpeg',
+      '../images/ipadpic2.jpeg',
+      '../images/ipadpic3.jpeg',
+      '../images/ipadpic4.jpeg',
+    ];
+  }
+};
+
 function slider() {
   const image1 = document.getElementById('homeImage');
   const image2 = document.getElementById('homeImage2');
   if (i === 0 && sliderState) {
     image1.setAttribute('src', imgArray[i]);
     image2.style.display = 'none';
+    console.log('inside first if');
   } else {
     image2.style.display = null;
     sliderState = false;
     if (i % 2 === 0) {
+      console.log('inside second if ' + i);
       image1.classList.remove('goOut');
       image2.classList.remove('comeIn');
       image2.classList.add('goOut');
@@ -60,6 +71,7 @@ function slider() {
       image1.classList.add('goOut');
       image2.classList.add('comeIn');
       image2.setAttribute('src', imgArray[i]);
+      console.log('inside else' + i);
     }
   }
 
@@ -67,6 +79,7 @@ function slider() {
     i++;
   } else {
     i = 0;
+    console.log(i);
   }
 }
 // setTimeout("slider()",1500);
@@ -88,7 +101,6 @@ function bothSlider() {
   slider();
   slider1();
 }
-window.onload = bothSlider;
 
 let burgerIcon = false;
 const burgerBtn = document.querySelector('.burger-icon');

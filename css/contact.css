@@ -162,6 +162,29 @@ input {
   left: 50%;
   transform: translateX(-50%);
 }
+form span{
+  /* background: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92px;
+    color: white;
+}
+form select{
+  height: 29px;
+}
+#day{
+  width: 8%;
+}
+#month{
+  width: 20%; 
+}
+#year{
+  width: 13%;
+}
+label{
+  padding: 13px;
+}
 textarea {
   resize: vertical;
   margin: 21px 0px;
@@ -375,6 +398,9 @@ textarea {
     position: absolute;
     top: 10px;
     right: -13%;
+  }
+  form span{
+    color: black;
   }
   .contact-information-container {
     width: 100%;

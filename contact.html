@@ -7,6 +7,7 @@
   <meta name="viewport"
     content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Contact Us</title>
+  <link rel="icon" href="../images/icon1.jpeg" />
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
@@ -53,7 +54,18 @@
               <input type="email" name="email" id="email" placeholder="Email" required />
               <input type="number" name="number" id="cnumber" placeholder="Contact Number" required />
               <input type="text" name="event" id="eventInfo" placeholder="Event Description" required />
-              <input type="date" name="date" id="eventDate" required />
+              <!-- <input type="date" name="date" id="eventDate" required /> -->
+              <span>
+                <label for="day">Day</label>
+                <select name="day" id="day"></select
+                ><br />
+                <label for="month">Month</label>
+                <select name="month" id="month"></select
+                ><br />
+                <label for="year">Year</label>
+                <select name="year" id="year"></select
+                ><br />
+              </span>
               <textarea cols="20" rows="10" name="message" id="message" placeholder="Tell me about it"></textarea>
               <button type="submit" name="button">Let's do it</button>
             </form>

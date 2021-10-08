@@ -422,10 +422,13 @@ textarea {
   }
   input {
     height: 25px;
-    width: 100%;
+    width: 100% !important;
     margin: 9px 0px;
     font-size: 14px;
     background-color: #b6bbbd80;
+  }
+  #eventDate {
+    width: 80vw !important;
   }
   textarea {
     height: 110px;

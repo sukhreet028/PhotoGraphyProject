@@ -74,7 +74,7 @@ function displayYear(){
     let year= new Date().getFullYear()
     for(let i=0; i<101; i++){
         const option=document.createElement('option');
-        option.textContent=year-i;
+        option.textContent=year+i;
         yearSelect.appendChild(option);
     }
 }

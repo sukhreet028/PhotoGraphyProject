@@ -518,12 +518,12 @@ body {
     margin-bottom: 15px;
 }
 .main-image-slide {
-  height: 50vh;
+  height: 70vh;
 }
 #homeImage,#homeImage2{
 position: absolute;
 width: 100vw;
-height: 50vh;
+height: 70vh;
 }
 }
 @media (max-width: 370px) {

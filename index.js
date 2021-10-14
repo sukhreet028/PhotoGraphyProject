@@ -13,37 +13,41 @@ window.onload = () => {
 console.log('outside func ' + deviceWidth);
 var sliderState = true;
 var imgArray = [
-  '../images/hp10.jpeg',
-  '../images/hp2.jpeg',
-  '../images/hp11.jpeg',
-  '../images/hp9.jpeg',
-  '../images/hp7.jpeg',
-  '../images/ipadpic4.jpeg',
+  './images/hp10.jpeg',
+  './images/hp2.jpeg',
+  './images/hp11.jpeg',
+  './images/hp7.jpeg',
+  './images/hpp6.jpeg',
+  './images/hp9.jpeg',
+  
 ];
 // logic to change the images on mobile and ipad
 
 var j = 0;
 var imgArray1 = [
   // "../images/a3.jpeg",
-  '../images/a4.jpeg',
-  '../images/a5.jpeg',
-  '../images/a9.jpeg',
+  './images/a4.jpeg',
+  './images/a5.jpeg',
+  './images/a9.jpeg',
 ];
 const changeSliderImages = () => {
   if (deviceWidth < 576) {
     imgArray = [
-      '../images/phnpic1.jpeg',
-      '../images/phnpic2.jpeg',
-      '../images/phnpic3.jpeg',
-      '../images/phnpic4.jpeg',
-      '../images/phnpic5.jpeg',
+      './images/phnpic1.jpeg',
+      './images/phnpic2.png',
+      './images/phnpic3.jpeg',
+      './images/phnpic44.jpeg',
+      './images/phnpic5.jpeg',
+      './images/phnpic6.jpg',
     ];
   } else if (deviceWidth < 900) {
     imgArray = [
-      '../images/ipadpic1.jpeg',
-      '../images/ipadpic2.jpeg',
-      '../images/ipadpic3.jpeg',
-      '../images/ipadpic4.jpeg',
+      './images/ipadpic1.jpeg',
+      './images/ipadpic2.jpeg',
+      './images/ipadpic3.jpeg',
+      './images/ipadpic4.jpeg',
+      './images/ipadpic5.jpeg',
+      './images/ipadpic6.jpg',
     ];
   }
 };

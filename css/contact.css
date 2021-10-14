@@ -165,26 +165,31 @@ input {
 form span{
   /* background: aqua; */
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    height: 92px;
+    height: 65px;
     color: white;
+   
+}
+form p{
+  color: white;
+  margin-left: 30px;
 }
 form select{
   height: 29px;
 }
 #day{
-  width: 8%;
+  width: 20%;
 }
 #month{
   width: 20%; 
 }
 #year{
-  width: 13%;
+  width: 20%;
 }
-label{
+/* label{
   padding: 13px;
-}
+} */
 textarea {
   resize: vertical;
   margin: 21px 0px;
@@ -427,9 +432,38 @@ textarea {
     font-size: 14px;
     background-color: #b6bbbd80;
   }
+  form span{
+    height: 120px;
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+  }
+  form p{
+    color: black;
+    margin: 0px;
+    height: 25px;
+    margin: 9px 0px;
+    font-size: 14px;
+  }
+  form select{
+    height: 29px;
+    margin: 2px;
+  }
+  #day{
+    width: 100%;
+  }
+  #month{
+    width: 100%; 
+  }
+  #year{
+    width: 100%;
+  }
   #eventDate {
     width: 80vw !important;
   }
+  /* select{
+    width: 100%;
+  } */
   textarea {
     height: 110px;
     width: 100%;
